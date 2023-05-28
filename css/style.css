@@ -34,7 +34,7 @@ body {
 }
 
 .post {
-    height: 15vh;
+    height: 17vh;
     padding: 2.5vh;
     background-color: #FFFFFF;
     display: flex;
@@ -47,6 +47,7 @@ body {
 .line {
     height: 3px;
     background-color: #8D5821;
+    margin-bottom: 1.5vh;
 }
 
 .posts {
@@ -70,16 +71,12 @@ body {
 
 .post-content {
     font-weight: bold;
-    margin-bottom: 0.7vh;
+    margin-bottom: 1.5vh;
 }
 
 .post-info {
     font-size: smaller;
     margin-left: 0.5vh;
-}
-
-.profile-pic-cont {
-    margin-right: 1vh;
 }
 
 .post-tags {
@@ -97,4 +94,21 @@ body {
     background-color: #EBEBEB;
     padding-left: 2vh;
     padding-right: 2vh;
+}
+
+.votes-cont {
+    margin-right: 1vh;
+}
+
+.add-tag {
+    font-size: x-large;
+}
+
+.pop-tag {
+    font-weight: bolder;
+}
+
+.pop-tag:hover {
+    color: #D4A373;
+    cursor: pointer;
 }
