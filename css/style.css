@@ -8,14 +8,18 @@ body {
 }
 
 .nav-item {
-    font-size: 2.3rem;
-    margin-right: 5px;
-    margin-left: 5px;
+    font-size: 2rem;
+    margin-right: 10px;
+    margin-left: 10px;
 }
 
 .header-text {
     color: #AD8156;
     font-weight: bolder;
+}
+
+.nav-icons {
+    color: #543515;
 }
 
 .side-text {
@@ -33,6 +37,7 @@ body {
     height: 15vh;
     padding: 2.5vh;
     background-color: #FFFFFF;
+    display: flex;
 }
 
 .content-container {
@@ -52,4 +57,44 @@ body {
 
 .post:not(:first-child) {
     margin-top: 3vh;
+}
+
+.profile-pic {
+    width:5.3vh;
+}
+
+.post-title {
+    margin-bottom: -0.2vh;
+    font-weight: bolder;
+}
+
+.post-content {
+    font-weight: bold;
+    margin-bottom: 0.7vh;
+}
+
+.post-info {
+    font-size: smaller;
+    margin-left: 0.5vh;
+}
+
+.profile-pic-cont {
+    margin-right: 1vh;
+}
+
+.post-tags {
+    font-size: smaller;
+    color: #D4A373;
+}
+
+.post-tags:hover {
+    color: #8D5821;
+    cursor: pointer;
+}
+
+.votes-cont, .comments-cont {
+    border-radius: 10vh;
+    background-color: #EBEBEB;
+    padding-left: 2vh;
+    padding-right: 2vh;
 }
