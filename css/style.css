@@ -25,19 +25,31 @@ body {
 
 .side-cont {
     height: 30vh;
+    padding:  2.5vh;
+    background-color: #FFFFFF;
 }
 
 .post {
     height: 15vh;
-    padding: 3vh;
+    padding: 2.5vh;
+    background-color: #FFFFFF;
 }
 
 .content-container {
     padding-left: 0 !important;
 }
 
+.line {
+    height: 3px;
+    background-color: #8D5821;
+}
+
 .posts {
     padding-left: 0 !important;
     width: 270vh;
-    margin-right: 3vh;
+    margin-right: 1.5vh;
+}
+
+.post:not(:first-child) {
+    margin-top: 3vh;
 }
