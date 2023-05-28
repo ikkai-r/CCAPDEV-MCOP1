@@ -69,6 +69,46 @@ body {
     font-weight: bolder;
 }
 
+a:hover {
+    cursor: pointer;
+}
+
+.logreg-modal {
+    padding: 3vh; 
+    border-radius: 50px;
+    background-color: #D4A373;
+    border-color: #D4A373;
+    color: #543515;
+}
+
+.btn-loginreg {
+    background-color: #D4A373;
+    border-color: #FAEDCD;
+    border-width: 3px;
+    color: #FAEDCD;
+    font-family: 'Shrikhand', cursive;
+    font-size: x-large;
+}
+
+.btn-loginreg:hover {
+    background-color: #FAEDCD;
+    border-color: #FAEDCD;
+    border-width: 3px;
+    color: #8D5821;
+}
+
+.reg-mod {
+    color: #8D5821;
+    font-weight: bold;
+    font-size: small;
+}
+
+.reg-btn {
+    color: #000000;
+    font-weight: bolder;
+    font-size: small;
+}
+
 .post-content {
     font-weight: bold;
     margin-bottom: 1.5vh;
@@ -89,14 +129,14 @@ body {
     cursor: pointer;
 }
 
-.votes-cont, .comments-cont {
+.votes-cont, .comments-cont, .share-cont {
     border-radius: 10vh;
     background-color: #EBEBEB;
     padding-left: 2vh;
     padding-right: 2vh;
 }
 
-.votes-cont {
+.votes-cont, .share-cont {
     margin-right: 1vh;
 }
 
