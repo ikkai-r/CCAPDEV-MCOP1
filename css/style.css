@@ -12,3 +12,32 @@ body {
     margin-right: 5px;
     margin-left: 5px;
 }
+
+.header-text {
+    color: #AD8156;
+    font-weight: bolder;
+}
+
+.side-text {
+    color: #8D5821;
+    font-weight: bold;
+}
+
+.side-cont {
+    height: 30vh;
+}
+
+.post {
+    height: 15vh;
+    padding: 3vh;
+}
+
+.content-container {
+    padding-left: 0 !important;
+}
+
+.posts {
+    padding-left: 0 !important;
+    width: 270vh;
+    margin-right: 3vh;
+}
