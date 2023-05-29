@@ -105,190 +105,282 @@
 
       <!-- Content Body -->
       <div class="container mt-4 pt-3">
-
-        <h1 class="header-text">Hot Posts</h1>
         <div class="container d-flex content-container mt-4">
 
-            <!-- All Posts Container -->
-            <div class="container flex-grow-1 posts">
-                
-                <!-- Post Container -->
-                <div class="row post">
+            <!-- Profile Container -->
+            <div class="container flex-grow-1 profile">
 
-                    <!-- Profile Picture -->
-                    <div class="col-1">
-                        <img src="img/profile-pic.png" class="profile-pic">
+                <!-- Profile Proper -->
+                <div class="row">
+                    <div class="col-12 d-flex justify-content-end">
+                        <i class="fa-regular fa-pen-to-square edit-profile-icon"></i>
                     </div>
-
-                    <!-- Post Proper -->
-                    <div class="col-11">
-                        <h5 class="post-title"><b>help my computer is dying</b></h5>
-                        <span class="post-info">posted by <a href="profile.html">helpvirus</a> on May 25, 2023</span>
-                        <p class="post-content pt-2">help i think i made a mistake, i downloaded this "free cool toolbar" extension and uploade...</p>
-                        <div class="d-flex justify-content-between">
-                            <span class="post-tags">#virus #ohgosh #aaa</span>
-                            <div class="actions-cont d-flex">
-                                <div class="share-cont">
-                                    <i class="fa-regular fa-share-from-square"></i>
-                                </div>
-                                <div class="votes-cont">
-                                    <i class="fa-solid fa-circle-up"></i>
-                                    <span style="font-size:smaller; margin-right: 0.5vh;"><b>101</b></span>
-                                    <span style="font-size:smaller; margin-right: 0.5vh;"><b>|</b></span>
-                                    <i class="fa-regular fa-circle-down"></i>
-                                    <span style="font-size:smaller"><b>100</b></span>
-                                </div>
-                                <div class="comments-cont">
-                                    <i class="fa-regular fa-comment-dots"></i>
-                                    <span style="font-size:smaller"><b>10</b></span>
-                                </div>
-                            </div>
-                        </div>
+                </div>
+                <div class="row d-flex align-items-center">
+                    <div class="col-3">
+                        <img src="img/profile-pic.png" class="user-profile-pic">
                     </div>
-        
+                    <div class="col-9" style="padding: 2.5vh;">
+                        <h3><strong>helpvirus</strong></h3>
+                        <span>i'm a great placeholder, just like how i am easily replaced</span>
+                    </div>
                 </div>
 
-                <!-- Post Container -->
-                <div class="row post">
+                <div class="profile-user-line mt-4"></div>
 
-                    <!-- Profile Picture -->
-                    <div class="col-1">
-                        <img src="img/profile-pic.png" class="profile-pic">
-                    </div>
+                <!-- User's Comments and Posts -->
+                <div class="row mt-5">
+                    <nav>
+                        <div class="nav nav-tabs d-flex justify-content-center" id="nav-tab" role="tablist">
+                                <button class="nav-link active profile-btn" id="nav-posts-tab" data-bs-toggle="tab" data-bs-target="#nav-posts" type="button" role="tab" aria-controls="nav-posts" aria-selected="true">
+                                    posts
+                                    <div class="profile-line"></div>
+                                </button>                          
+                              <button class="nav-link profile-btn" id="nav-comments-tab" data-bs-toggle="tab" data-bs-target="#nav-comments" type="button" role="tab" aria-controls="nav-comments" aria-selected="false">
+                                comments
+                                <div class="profile-line"></div>
+                            </button>                    
+                            </div>
+                      </nav>
 
-                    <!-- Post Proper -->
-                    <div class="col-11">
-                        <h5 class="post-title"><b>help my computer is dying</b></h5>
-                        <span class="post-info">posted by helpvirus on May 25, 2023</span>
-                        <p class="post-content pt-2">help i think i made a mistake, i downloaded this "free cool toolbar" extension and uploade...</p>
-                        <div class="d-flex justify-content-between">
-                            <span class="post-tags">#virus #ohgosh #aaa</span>
-                            <div class="actions-cont d-flex">
-                                <div class="share-cont">
-                                    <i class="fa-regular fa-share-from-square"></i>
+                      <!-- Tab Contents -->
+
+                      <div class="tab-content mt-4" id="nav-tabContent">
+                        
+                        <!-- Posts Content Tab -->
+                        <div class="tab-pane fade show active" id="nav-posts" role="tabpanel" aria-labelledby="nav-posts-tab">
+                            <div class="container">
+                                    
+                                <!-- Post Container -->
+                                    <div class="row post-user">
+
+                                        <!-- Post Proper -->
+
+                                            <div class="d-flex justify-content-between">
+                                                <h5 class="post-title"><b>help my computer is dying</b></h5>
+                                                <i class="fa-regular fa-pen-to-square"></i>
+                                            </div>
+                                           
+                                            <span class="post-info">posted by <a href="profile.html">helpvirus</a> on May 25, 2023</span>
+                                            <p class="post-content pt-2">help i think i made a mistake, i downloaded this "free cool toolbar" extension and uploade...</p>
+                                            <div class="d-flex justify-content-between">
+                                                                                            <div class="d-flex">
+                                                <span class="postcom-tags post-tags-cont">#virus</span>
+                                                <span class="postcom-tags post-tags-cont">#ohgosh</span>
+                                                <span class="postcom-tags post-tags-cont">#aaa</span>
+                                            </div>
+                                                <div class="actions-cont d-flex">
+                                                    <div class="share-cont">
+                                                        <i class="fa-regular fa-share-from-square"></i>
+                                                    </div>
+                                                    <div class="votes-cont">
+                                                        <i class="fa-solid fa-circle-up"></i>
+                                                        <span style="font-size:smaller; margin-right: 0.5vh;"><b>101</b></span>
+                                                        <span style="font-size:smaller; margin-right: 0.5vh;"><b>|</b></span>
+                                                        <i class="fa-regular fa-circle-down"></i>
+                                                        <span style="font-size:smaller"><b>100</b></span>
+                                                    </div>
+                                                    <div class="comments-cont">
+                                                        <i class="fa-regular fa-comment-dots"></i>
+                                                        <span style="font-size:smaller"><b>10</b></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                    </div>
+
+                                                                        
+                                <!-- Post Container -->
+                                <div class="row post-user">
+
+                                    <!-- Post Proper -->
+
+                                        <div class="d-flex justify-content-between">
+                                            <h5 class="post-title"><b>help my computer is dying</b></h5>
+                                            <i class="fa-regular fa-pen-to-square"></i>
+                                        </div>
+                                       
+                                        <span class="post-info">posted by <a href="profile.html">helpvirus</a> on May 25, 2023</span>
+                                        <p class="post-content pt-2">help i think i made a mistake, i downloaded this "free cool toolbar" extension and uploade...</p>
+                                        <div class="d-flex justify-content-between">
+                                                                                        <div class="d-flex">
+                                                <span class="postcom-tags post-tags-cont">#virus</span>
+                                                <span class="postcom-tags post-tags-cont">#ohgosh</span>
+                                                <span class="postcom-tags post-tags-cont">#aaa</span>
+                                            </div>
+                                            <div class="actions-cont d-flex">
+                                                <div class="share-cont">
+                                                    <i class="fa-regular fa-share-from-square"></i>
+                                                </div>
+                                                <div class="votes-cont">
+                                                    <i class="fa-solid fa-circle-up"></i>
+                                                    <span style="font-size:smaller; margin-right: 0.5vh;"><b>101</b></span>
+                                                    <span style="font-size:smaller; margin-right: 0.5vh;"><b>|</b></span>
+                                                    <i class="fa-regular fa-circle-down"></i>
+                                                    <span style="font-size:smaller"><b>100</b></span>
+                                                </div>
+                                                <div class="comments-cont">
+                                                    <i class="fa-regular fa-comment-dots"></i>
+                                                    <span style="font-size:smaller"><b>10</b></span>
+                                                </div>
+                                            </div>
+                                        </div>
                                 </div>
-                                <div class="votes-cont">
-                                    <i class="fa-solid fa-circle-up"></i>
-                                    <span style="font-size:smaller; margin-right: 0.5vh;"><b>101</b></span>
-                                    <span style="font-size:smaller; margin-right: 0.5vh;"><b>|</b></span>
-                                    <i class="fa-regular fa-circle-down"></i>
-                                    <span style="font-size:smaller"><b>100</b></span>
+
+                                                                    
+                                <!-- Post Container -->
+                                <div class="row post-user">
+
+                                    <!-- Post Proper -->
+
+                                        <div class="d-flex justify-content-between">
+                                            <h5 class="post-title"><b>help my computer is dying</b></h5>
+                                            <i class="fa-regular fa-pen-to-square"></i>
+                                        </div>
+                                       
+                                        <span class="post-info">posted by <a href="profile.html">helpvirus</a> on May 25, 2023</span>
+                                        <p class="post-content pt-2">help i think i made a mistake, i downloaded this "free cool toolbar" extension and uploade...</p>
+                                        <div class="d-flex justify-content-between">
+                                            <div class="d-flex">
+                                                <span class="postcom-tags post-tags-cont">#virus</span>
+                                                <span class="postcom-tags post-tags-cont">#ohgosh</span>
+                                                <span class="postcom-tags post-tags-cont">#aaa</span>
+                                            </div>
+                                            <div class="actions-cont d-flex">
+                                                <div class="share-cont">
+                                                    <i class="fa-regular fa-share-from-square"></i>
+                                                </div>
+                                                <div class="votes-cont">
+                                                    <i class="fa-solid fa-circle-up"></i>
+                                                    <span style="font-size:smaller; margin-right: 0.5vh;"><b>101</b></span>
+                                                    <span style="font-size:smaller; margin-right: 0.5vh;"><b>|</b></span>
+                                                    <i class="fa-regular fa-circle-down"></i>
+                                                    <span style="font-size:smaller"><b>100</b></span>
+                                                </div>
+                                                <div class="comments-cont">
+                                                    <i class="fa-regular fa-comment-dots"></i>
+                                                    <span style="font-size:smaller"><b>10</b></span>
+                                                </div>
+                                            </div>
+                                        </div>
                                 </div>
-                                <div class="comments-cont">
-                                    <i class="fa-regular fa-comment-dots"></i>
-                                    <span style="font-size:smaller"><b>10</b></span>
+
+                                                                    
+                                <!-- Post Container -->
+                                <div class="row post-user">
+
+                                    <!-- Post Proper -->
+
+                                        <div class="d-flex justify-content-between">
+                                            <h5 class="post-title"><b>help my computer is dying</b></h5>
+                                            <i class="fa-regular fa-pen-to-square"></i>
+                                        </div>
+                                       
+                                        <span class="post-info">posted by <a href="profile.html">helpvirus</a> on May 25, 2023</span>
+                                        <p class="post-content pt-2">help i think i made a mistake, i downloaded this "free cool toolbar" extension and uploade...</p>
+                                        <div class="d-flex justify-content-between">
+                                                                                        <div class="d-flex">
+                                                <span class="postcom-tags post-tags-cont">#virus</span>
+                                                <span class="postcom-tags post-tags-cont">#ohgosh</span>
+                                                <span class="postcom-tags post-tags-cont">#aaa</span>
+                                            </div>
+                                            <div class="actions-cont d-flex">
+                                                <div class="share-cont">
+                                                    <i class="fa-regular fa-share-from-square"></i>
+                                                </div>
+                                                <div class="votes-cont">
+                                                    <i class="fa-solid fa-circle-up"></i>
+                                                    <span style="font-size:smaller; margin-right: 0.5vh;"><b>101</b></span>
+                                                    <span style="font-size:smaller; margin-right: 0.5vh;"><b>|</b></span>
+                                                    <i class="fa-regular fa-circle-down"></i>
+                                                    <span style="font-size:smaller"><b>100</b></span>
+                                                </div>
+                                                <div class="comments-cont">
+                                                    <i class="fa-regular fa-comment-dots"></i>
+                                                    <span style="font-size:smaller"><b>10</b></span>
+                                                </div>
+                                            </div>
+                                        </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-        
-                </div>
 
-                <!-- Post Container -->
-                <div class="row post">
+                        <!-- User Comments Tab -->
+                        <div class="tab-pane fade" id="nav-comments" role="tabpanel" aria-labelledby="nav-comments-tab">
+                            <div class="container">                                
+                       
+                                <!-- Comment Container -->
+                                <div class="row post-comment">
 
-                    <!-- Profile Picture -->
-                    <div class="col-1">
-                        <img src="img/profile-pic.png" class="profile-pic">
-                    </div>
+                                    <!-- Comment Proper -->
 
-                    <!-- Post Proper -->
-                    <div class="col-11">
-                        <h5 class="post-title"><b>help my computer is dying</b></h5>
-                        <span class="post-info">posted by helpvirus on May 25, 2023</span>
-                        <p class="post-content pt-2">help i think i made a mistake, i downloaded this "free cool toolbar" extension and uploade...</p>
-                        <div class="d-flex justify-content-between">
-                            <span class="post-tags">#virus #ohgosh #aaa</span>
-                            <div class="actions-cont d-flex">
-                                <div class="share-cont">
-                                    <i class="fa-regular fa-share-from-square"></i>
+                                        <div class="d-flex justify-content-between">
+                                            <h6 class="comment-title"><b>help my computer is dying</b></h6> 
+                                            <span class="postcom-tags tags-cont">#virus #ohgosh #aaa</span>
+                                        </div>
+                                       
+                                        <span class="comment-info">helpvirus commented on May 25, 2023</span>
+                                        <p class="post-content pt-2">Why did you download from an untrusted source? Internet rules say that you...</p>
+                                        <div class="d-flex justify-content-between">
+                                            <div class="share-cont">
+                                                <i class="fa-regular fa-pen-to-square"></i>
+                                            </div>
+                                            <div class="actions-cont d-flex">
+                                                <div class="share-cont">
+                                                    <i class="fa-regular fa-share-from-square"></i>
+                                                </div>
+                                                <div class="votes-cont">
+                                                    <i class="fa-solid fa-circle-up"></i>
+                                                    <span style="font-size:smaller; margin-right: 0.5vh;"><b>101</b></span>
+                                                    <span style="font-size:smaller; margin-right: 0.5vh;"><b>|</b></span>
+                                                    <i class="fa-regular fa-circle-down"></i>
+                                                    <span style="font-size:smaller"><b>100</b></span>
+                                                </div>
+                                                <div class="comments-cont">
+                                                    <i class="fa-regular fa-comment-dots"></i>
+                                                    <span style="font-size:smaller"><b>Reply</b></span>
+                                                </div>
+                                            </div>
+                                        </div>
                                 </div>
-                                <div class="votes-cont">
-                                    <i class="fa-solid fa-circle-up"></i>
-                                    <span style="font-size:smaller; margin-right: 0.5vh;"><b>101</b></span>
-                                    <span style="font-size:smaller; margin-right: 0.5vh;"><b>|</b></span>
-                                    <i class="fa-regular fa-circle-down"></i>
-                                    <span style="font-size:smaller"><b>100</b></span>
+
+                                <!-- Comment Container -->
+                                <div class="row post-comment">
+
+                                    <!-- Comment Proper -->
+
+                                        <div class="d-flex justify-content-between">
+                                            <h6 class="comment-title"><b>ummm I don't know</b></h6> 
+                                            <span class="postcom-tags tags-cont">#wiw #idk #huh???</span>
+                                        </div>
+                                       
+                                        <span class="comment-info">helpvirus commented on May 29, 2023</span>
+                                        <p class="post-content pt-2">Do you know what I know? Maybe you know what I know.</p>
+                                        <div class="d-flex justify-content-between">
+                                            <div class="share-cont">
+                                                <i class="fa-regular fa-pen-to-square"></i>
+                                            </div>
+                                            <div class="actions-cont d-flex">
+                                                <div class="share-cont">
+                                                    <i class="fa-regular fa-share-from-square"></i>
+                                                </div>
+                                                <div class="votes-cont">
+                                                    <i class="fa-solid fa-circle-up"></i>
+                                                    <span style="font-size:smaller; margin-right: 0.5vh;"><b>101</b></span>
+                                                    <span style="font-size:smaller; margin-right: 0.5vh;"><b>|</b></span>
+                                                    <i class="fa-regular fa-circle-down"></i>
+                                                    <span style="font-size:smaller"><b>100</b></span>
+                                                </div>
+                                                <div class="comments-cont">
+                                                    <i class="fa-regular fa-comment-dots"></i>
+                                                    <span style="font-size:smaller"><b>Reply</b></span>
+                                                </div>
+                                            </div>
+                                        </div>
                                 </div>
-                                <div class="comments-cont">
-                                    <i class="fa-regular fa-comment-dots"></i>
-                                    <span style="font-size:smaller"><b>10</b></span>
-                                </div>
+
                             </div>
                         </div>
-                    </div>
-        
-                </div>
-
-                <!-- Post Container -->
-                <div class="row post">
-
-                    <!-- Profile Picture -->
-                    <div class="col-1">
-                        <img src="img/profile-pic.png" class="profile-pic">
-                    </div>
-
-                    <!-- Post Proper -->
-                    <div class="col-11">
-                        <h5 class="post-title"><b>help my computer is dying</b></h5>
-                        <span class="post-info">posted by helpvirus on May 25, 2023</span>
-                        <p class="post-content pt-2">help i think i made a mistake, i downloaded this "free cool toolbar" extension and uploade...</p>
-                        <div class="d-flex justify-content-between">
-                            <span class="post-tags">#virus #ohgosh #aaa</span>
-                            <div class="actions-cont d-flex">
-                                <div class="share-cont">
-                                    <i class="fa-regular fa-share-from-square"></i>
-                                </div>
-                                <div class="votes-cont">
-                                    <i class="fa-solid fa-circle-up"></i>
-                                    <span style="font-size:smaller; margin-right: 0.5vh;"><b>101</b></span>
-                                    <span style="font-size:smaller; margin-right: 0.5vh;"><b>|</b></span>
-                                    <i class="fa-regular fa-circle-down"></i>
-                                    <span style="font-size:smaller"><b>100</b></span>
-                                </div>
-                                <div class="comments-cont">
-                                    <i class="fa-regular fa-comment-dots"></i>
-                                    <span style="font-size:smaller"><b>10</b></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-        
-                </div>
-                <!-- Post Container -->
-                <div class="row post">
-
-                    <!-- Profile Picture -->
-                    <div class="col-1">
-                        <img src="img/profile-pic.png" class="profile-pic">
-                    </div>
-
-                    <!-- Post Proper -->
-                    <div class="col-11">
-                        <h5 class="post-title"><b>help my computer is dying</b></h5>
-                        <span class="post-info">posted by helpvirus on May 25, 2023</span>
-                        <p class="post-content pt-2">help i think i made a mistake, i downloaded this "free cool toolbar" extension and uploade...</p>
-                        <div class="d-flex justify-content-between">
-                            <span class="post-tags">#virus #ohgosh #aaa</span>
-                            <div class="actions-cont d-flex">
-                                <div class="share-cont">
-                                    <i class="fa-regular fa-share-from-square"></i>
-                                </div>
-                                <div class="votes-cont">
-                                    <i class="fa-solid fa-circle-up"></i>
-                                    <span style="font-size:smaller; margin-right: 0.5vh;"><b>101</b></span>
-                                    <span style="font-size:smaller; margin-right: 0.5vh;"><b>|</b></span>
-                                    <i class="fa-regular fa-circle-down"></i>
-                                    <span style="font-size:smaller"><b>100</b></span>
-                                </div>
-                                <div class="comments-cont">
-                                    <i class="fa-regular fa-comment-dots"></i>
-                                    <span style="font-size:smaller"><b>10</b></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-        
+                      </div>
                 </div>
 
             </div>
