@@ -13,6 +13,19 @@ body {
     margin-left: 10px;
 }
 
+.profile-dropdown {
+    background-color: #543515;
+}
+
+.profile-dd-item {
+    color: white;
+}
+
+.profile-dd-item:hover {
+    background-color: #AD8156;
+    color: white;
+}
+
 .header-text {
     color: #AD8156;
     font-weight: bolder;
