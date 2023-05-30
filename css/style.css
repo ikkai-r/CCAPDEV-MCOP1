@@ -353,6 +353,7 @@ button.active div {
 .post-creator {
     width: 270vh;
     padding: 2.5vh;
+    margin-bottom: 3vh;
     background-color: #FFFFFF;
 }
 
@@ -379,7 +380,8 @@ button.active div {
 .post-creator-description{
     background-color:#ebebeb;
     padding: 1.5vh;
-    border: none;
+    margin-bottom: 1.5vh;
+    outline: none;
     overflow-y: auto;
     resize: none;
     width:100%;
@@ -388,13 +390,13 @@ button.active div {
 
 .post-creator-add-tag {
     width:100%;
-    border: none;
+    border: none !important; 
     background-color: #FFFFFF;
     color: #919191;
     font-weight: bolder;
-    font-size: 1vh;
+    font-size: 1.3vh;
     resize: none;
-    margin-bottom: 2vh;
+    margin-bottom: 1.5vh;
 }
 
 .post-creator-buttons{
@@ -405,7 +407,7 @@ button.active div {
 .pill {
     border:none;
     font-weight: bolder;
-    border-radius:40%;
+    border-radius:30px;
     padding-left: 1.5vh;
     padding-right: 1.5vh;
     width: 10vh;
