@@ -297,6 +297,7 @@ button.active div {
     display: flex;
 }
 
+/* View Tag Styles */
 .card {
     background-color:#FFFFFF;
     border: none;
@@ -334,3 +335,76 @@ button.active div {
     background-color:#703f3f;
     height: 100%;
 }
+
+/* Post Creator Style */
+.post-creator {
+    width: 270vh;
+    padding: 2.5vh;
+    background-color: #FFFFFF;
+}
+
+.post-creator-delete{
+    float: right;
+}
+
+.post-creator-title {
+    width:100%;
+    border: none;
+    color: #919191;
+    font-weight: bolder;
+    font-size: 3.5vh;
+    resize: none;
+}
+
+.post-creator-posted-by {
+    margin-top:0;
+    color: #000000;
+    font-weight: bold;
+    font-size: 1vh;
+}
+
+.post-creator-description{
+    background-color:#ebebeb;
+    padding: 1.5vh;
+    border: none;
+    overflow-y: auto;
+    resize: none;
+    width:100%;
+    height: auto;
+}
+
+.post-creator-add-tag {
+    width:100%;
+    border: none;
+    background-color: #FFFFFF;
+    color: #919191;
+    font-weight: bolder;
+    font-size: 1vh;
+    resize: none;
+    margin-bottom: 2vh;
+}
+
+.post-creator-buttons{
+    display: flex;
+    justify-content: space-between;
+}
+
+.pill {
+    border:none;
+    font-weight: bolder;
+    border-radius:40%;
+    padding-left: 1.5vh;
+    padding-right: 1.5vh;
+    width: 10vh;
+    height:4.5vh;
+    font-size: 1.5vh;
+}
+
+.post-creator-cancel{
+    background-color: #DBDBDB;
+}
+
+.post-creator-post{
+    background-color: #D4A373;
+}
+
