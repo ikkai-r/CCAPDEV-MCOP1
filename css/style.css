@@ -44,6 +44,21 @@ body {
     display: flex;
 }
 
+.post-user {
+    padding: 2.5vh;
+    background-color: #ebebeb;
+    display: flex;
+}
+
+.post-user:not(:first-child) {
+    margin-top: 1vh;
+}
+
+.post-comment {
+    background-color: #ebebeb;
+    padding: 2.5vh;
+}
+
 .content-container {
     padding-left: 0 !important;
 }
@@ -60,6 +75,19 @@ body {
     margin-bottom: 1.5vh;
 }
 
+.profile-user-line {
+    height: 3px;
+    background-color: black;
+    margin-bottom: 1.5vh;
+}
+
+.profile-line {
+    height: 4px;
+    background-color: #543515;
+    width: 25vh;
+    visibility: hidden;
+}
+
 .posts {
     padding-left: 0 !important;
     width: 270vh;
@@ -70,6 +98,10 @@ body {
     margin-top: 3vh;
 }
 
+.post-comment:not(:first-child) {
+    margin-top: 1vh;
+}
+
 .profile-pic {
     width:5.3vh;
 }
@@ -78,9 +110,50 @@ body {
     width:3vh;
 }
 
+.profile {
+    background-color: #FFFFFF;
+    height: 100%;
+    width: 270vh;
+    margin-right: 1.5vh;
+    padding: 5vh;
+}
+
+.edit-profile-icon {
+    font-size: 1.5rem;
+}
+
+.profile-btn {
+    font-size:larger;
+    font-weight: bolder;
+    margin-left: 5vh;
+    margin-right: 5vh;
+}
+
+.profile-btn:hover {
+    color: #8D5821;
+}
+
+.edit-profile-icon:hover {
+    color: #8D5821;
+    cursor: pointer;
+}
+
+.user-profile-pic {
+    width: 20vh;
+}
+
 .post-title {
     margin-bottom: -0.2vh;
     font-weight: bolder;
+}
+
+.comment-title {
+    margin-bottom: -0.13vh;
+    font-weight: bolder;
+}
+
+.comment-info {
+    font-size: smaller;
 }
 
 .side-post-title {
@@ -97,6 +170,25 @@ body {
 a:hover {
     cursor: pointer;
 }
+
+.nav-tabs {
+    border-width: 0px;
+    border-color: white;
+}
+
+.nav-link {
+    border-width: 0px !important;
+    color: black;
+}
+
+button.active {
+   color: #8D5821 !important;
+}
+
+button.active div {
+    margin-top: 5px;
+    visibility: visible;
+  }
 
 .logreg-modal {
     padding: 3vh; 
@@ -144,21 +236,43 @@ a:hover {
     margin-left: 0.5vh;
 }
 
-.post-tags {
+.post-tags, .postcom-tags {
     font-size: smaller;
     color: #D4A373;
 }
 
-.post-tags:hover {
+.post-tags:hover, .add-tag:hover {
     color: #8D5821;
+    cursor: pointer;
+}
+
+.postcom-tags:hover {
+    color: white;
     cursor: pointer;
 }
 
 .votes-cont, .comments-cont, .share-cont {
     border-radius: 10vh;
-    background-color: #EBEBEB;
+    background-color: #dbdbdb;
     padding-left: 2vh;
     padding-right: 2vh;
+}
+
+.tags-cont {
+    border-radius: 10vh;
+    background-color: #703f3f;
+    padding-left: 2vh;
+    padding-right: 2vh;
+}
+
+.post-tags-cont {
+    border-radius: 10vh;
+    background-color: #703f3f;
+    padding-left: 1.3vh;
+    padding-right: 1.3vh;
+    padding-top: 0.3vh;
+    margin-right: 0.3vh;
+    margin-left: 0.3vh;
 }
 
 .votes-cont, .share-cont {
@@ -186,11 +300,15 @@ a:hover {
     margin-bottom: 4vh;
 }
 
+
 .tag-group {
     background-color:#FFF6EB;
     border: solid 1px #000000;
     border-radius: 15px;
     justify-content: center;
+
+/* View Tag Styles */
+
 
     box-shadow: 1vh 1vh #D4A373, 1vh 1vh 0px 1px black;
 
@@ -230,9 +348,84 @@ a:hover {
     background-repeat:no-repeat;
     background-image:url(img/sans.png);
 
+
     background-color:#DBBFA4;
 
     border-radius: 20px;
 
     height: 82%;
 }
+
+
+/* Post Creator Style */
+.post-creator {
+    width: 270vh;
+    padding: 2.5vh;
+    background-color: #FFFFFF;
+}
+
+.post-creator-delete{
+    float: right;
+}
+
+.post-creator-title {
+    width:100%;
+    border: none;
+    color: #919191;
+    font-weight: bolder;
+    font-size: 3.5vh;
+    resize: none;
+}
+
+.post-creator-posted-by {
+    margin-top:0;
+    color: #000000;
+    font-weight: bold;
+    font-size: 1vh;
+}
+
+.post-creator-description{
+    background-color:#ebebeb;
+    padding: 1.5vh;
+    border: none;
+    overflow-y: auto;
+    resize: none;
+    width:100%;
+    height: auto;
+}
+
+.post-creator-add-tag {
+    width:100%;
+    border: none;
+    background-color: #FFFFFF;
+    color: #919191;
+    font-weight: bolder;
+    font-size: 1vh;
+    resize: none;
+    margin-bottom: 2vh;
+}
+
+.post-creator-buttons{
+    display: flex;
+    justify-content: space-between;
+}
+
+.pill {
+    border:none;
+    font-weight: bolder;
+    border-radius:40%;
+    padding-left: 1.5vh;
+    padding-right: 1.5vh;
+    width: 10vh;
+    height:4.5vh;
+    font-size: 1.5vh;
+}
+
+.post-creator-cancel{
+    background-color: #DBDBDB;
+}
+
+.post-creator-post{
+    background-color: #D4A373;
+}
+
