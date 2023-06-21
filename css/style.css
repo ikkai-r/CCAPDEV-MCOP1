@@ -313,15 +313,19 @@ button.active div {
     margin-bottom: 4vh;
 }
 
+/* View Tag Styles */
+.tag-group-row{
+    justify-content: space-between;
+    display: flex;
+
+    margin-bottom: 4vh;
+}
 
 .tag-group {
     background-color:#FFF6EB;
     border: solid 1px #000000;
     border-radius: 15px;
     justify-content: center;
-
-/* View Tag Styles */
-
 
     box-shadow: 1vh 1vh #D4A373, 1vh 1vh 0px 1px black;
 
@@ -398,7 +402,7 @@ button.active div {
     font-size: 1vh;
 }
 
-.post-creator-description{
+.post-creator-description, .comment-textarea{
     background-color:#ebebeb;
     padding: 1.5vh;
     margin-bottom: 1.5vh;
@@ -407,6 +411,10 @@ button.active div {
     resize: none;
     width:100%;
     height: auto;
+}
+
+.post-creator-description:focus, .comment-textarea:focus{
+    border:none;
 }
 
 .post-creator-add-tag {
@@ -420,12 +428,12 @@ button.active div {
     margin-bottom: 1.5vh;
 }
 
-.post-creator-buttons{
+.post-creator-buttons, .comment-buttons{
     display: flex;
     justify-content: space-between;
 }
 
-.pill {
+.pill, .comment-pill {
     border:none;
     font-weight: bolder;
     border-radius:30px;
@@ -434,6 +442,13 @@ button.active div {
     width: 10vh;
     height:4.5vh;
     font-size: 1.5vh;
+    cursor:pointer;
+}
+
+.comment-pill {
+    width: 8vh;
+    height:3.5vh;
+    font-size: 1.3vh;
 }
 
 .post-creator-cancel{
@@ -444,3 +459,76 @@ button.active div {
     background-color: #D4A373;
 }
 
+
+/* View Post */
+.viewed-post{
+    width: 270vh;
+    
+    background-color: #FFFFFF;
+    
+    padding: 2.5vh;
+}
+
+.viewed-post-img{
+    margin-top:0.5vh;
+    margin-bottom:0.5vh;
+    margin-left: auto;
+    margin-right: auto;
+    
+    background-position:top; 
+    background-size:cover; 
+    background-repeat:no-repeat;
+    background-color:#DBBFA4;
+
+    height: 30%;
+    width: 30%
+}
+
+.viewed-post-actions{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.viewed-post-container {
+    border-bottom: 2px solid #919191;
+}
+
+.comment-username {
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+.comment-vote-cont{
+    font-weight: bolder;
+    font-size: 1.7em;
+}
+
+.comment-profile-pic {
+    width:4vh;
+}
+
+.comment-content, .comment-reply, .comment-hide-reply {
+    font-size: 0.9em;
+    margin-top:1vh;
+    margin-bottom:1vh;
+}
+
+.comment-reply, .comment-hide-reply {
+    font-weight: bold;
+    cursor:pointer;
+}
+
+.comment-hide-reply {
+    text-decoration: underline;
+}
+
+.comment-textarea {
+    background-color: #EBEBEB;
+    /* margin-top: 2vh; */
+    margin-bottom: 2vh;
+    height: 10vh;
+}
+
+.all-comment::not(:first-child){
+    margin-left:4rem;
+}
