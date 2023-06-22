@@ -117,10 +117,14 @@ body {
 
 .profile-pic {
     width:5.3vh;
+    height: 5.3vh;
+    border-radius: 50%;
 }
 
 .profile-pic-side {
     width:3vh;
+    height: 3vh;
+    border-radius: 50%;
 }
 
 .profile {
@@ -153,6 +157,8 @@ body {
 
 .user-profile-pic {
     width: 20vh;
+    border-radius: 50%;
+    height: 20vh;
 }
 
 .post-title {
@@ -505,6 +511,8 @@ button.active div {
 
 .comment-profile-pic {
     width:4vh;
+    height: 4vh;
+    border-radius: 50%;
 }
 
 .comment-content, .comment-reply, .comment-hide-reply {
@@ -531,4 +539,69 @@ button.active div {
 
 .all-comment::not(:first-child){
     margin-left:4rem;
+}
+
+/* Edit Profile */
+
+.edit-profile-bg {
+    width: 100%;
+    height: 30vh;
+    filter: blur(3px);
+    -webkit-filter: blur(3px);
+    background-position:center; 
+    background-size:cover; 
+    background-repeat:no-repeat;
+    background-image:url(../img/profile.png);
+} 
+
+.edit-profile-cont {
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+
+.edit-modal {
+    padding: 3vh; 
+    border-radius: 50px;
+    background-color: #D4A373;
+    border-color: #D4A373;
+    color: #543515;
+}
+
+.edit-profile-pic {
+    position: absolute;
+    margin: auto;
+    width: 20vh;
+    border-radius: 50%;
+    height: 20vh;
+    border-color: #543515;
+    border-width: 2px;
+    border-style: solid;
+}
+
+.pen-circle {
+    position: absolute;
+    margin-left: 16vh;
+    margin-top: 15vh;
+    background-color: #FCF4D7;
+    border-color: #543515;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 50%;
+    width: 6vh;
+    height: 6vh;
+}
+
+.pen-style {
+    position: absolute;
+    font-size: xx-large;
+    margin-left: -1.5vh;
+    margin-top: 1vh;
+    color: #543515;
+}
+
+.pen-style:hover {
+    cursor: pointer;
 }
