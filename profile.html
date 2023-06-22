@@ -111,11 +111,19 @@
 
     <!-- Edit Profile Modal -->
     <div class="modal fade" id="edProfModal" tabindex="-1" aria-labelledby="edProfModal" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" style="width: 40vh;">
+        <div class="modal-dialog modal-dialog-centered" style="width: 90vh;">
             <div class="container">
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="width: 75vh; font-size: 1.3rem; opacity: 1;"></button>
-                <div class="modal-content logreg-modal">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="width: 175vh; font-size: 1.3rem; opacity: 1;"></button>
+                <div class="modal-content editprofile-modal">
+                    <div class="modal-head d-flex justify-content-center">
+                        <h3><b>Edit Profile</b></h3>
+                    </div>
                     <div class="modal-body">
+                        <div style="position: absolute; z-index: 2; height: 33vh; width: 100%;" class="d-flex justify-content-center align-items-center">
+                            <img src="img/profile-pic.png" style="width: 20vh">
+                        </div>
+                        <div class="profile-img-edit">
+                        </div>
                         <form>
                             <div class="mb-3">
                               <label for="email" class="col-form-label"><b>email</b></label>
