@@ -615,3 +615,32 @@ button.active div {
 .pen-style:hover {
     cursor: pointer;
 }
+
+/*View Tag*/
+.view-tag-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tag-post-hder {
+    display: flex;
+    justify-content:space-between;
+    width: 66vh;
+}
+
+.tag-post-hd {
+    width: 32vh;
+    background-color: #8D5821;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 1vh;
+    color: #DBDBDB;
+    border-radius: 10px;
+}
+
+.tag-post-hd:first-child:hover {
+    background-color: #AD8156;
+    cursor: pointer;
+}
