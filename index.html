@@ -131,44 +131,44 @@
             <div class="container flex-grow-1 posts">
                 
                 <!-- Post Container -->
-                <div class="row post">
+                    <div class="row post">
 
-                    <!-- Profile Picture -->
-                    <div class="col-1">
-                        <img src="img/profile.png" class="profile-pic">
-                    </div>
-
-                    <!-- Post Proper -->
-                    <div class="col-11">
-                        <h5 class="post-title"><b>help my computer is dying</b></h5>
-                        <span class="post-info">posted by <a href="profile.html">helpvirus</a> on May 25, 2023</span>
-                        <p class="post-content pt-2">help i think i made a mistake, i downloaded this "free cool toolbar" extension and uploade...</p>
-                        <div class="d-flex justify-content-between">
-                            <div class="d-flex">
-                                <span class="postcom-tags post-tags-cont">#virus</span>
-                                <span class="postcom-tags post-tags-cont">#ohgosh</span>
-                                <span class="postcom-tags post-tags-cont">#aaa</span>
-                            </div>
-                            <div class="actions-cont d-flex">
-                                <div class="share-cont">
-                                    <i class="fa-regular fa-share-from-square"></i>
+                        <!-- Profile Picture -->
+                        <div class="col-1">
+                            <img src="img/profile.png" class="profile-pic">
+                        </div>
+    
+                        <!-- Post Proper -->
+                        <div class="col-11">
+                            <h5 class="post-title"><b>help my computer is dying</b></h5>
+                            <span class="post-info">posted by <a href="profile.html">helpvirus</a> on May 25, 2023</span>
+                            <p class="post-content pt-2">help i think i made a mistake, i downloaded this "free cool toolbar" extension and uploade...</p>
+                            <div class="d-flex justify-content-between">
+                                <div class="d-flex">
+                                    <span class="postcom-tags post-tags-cont">#virus</span>
+                                    <span class="postcom-tags post-tags-cont">#ohgosh</span>
+                                    <span class="postcom-tags post-tags-cont">#aaa</span>
                                 </div>
-                                <div class="votes-cont">
-                                    <i class="fa-solid fa-circle-up"></i>
-                                    <span style="font-size:smaller; margin-right: 0.5vh;"><b>101</b></span>
-                                    <span style="font-size:smaller; margin-right: 0.5vh;"><b>|</b></span>
-                                    <i class="fa-regular fa-circle-down"></i>
-                                    <span style="font-size:smaller"><b>100</b></span>
-                                </div>
-                                <div class="comments-cont">
-                                    <i class="fa-regular fa-comment-dots"></i>
-                                    <span style="font-size:smaller"><b>0</b></span>
+                                <div class="actions-cont d-flex">
+                                    <div class="share-cont">
+                                        <i class="fa-regular fa-share-from-square"></i>
+                                    </div>
+                                    <div class="votes-cont">
+                                        <i class="fa-solid fa-circle-up"></i>
+                                        <span style="font-size:smaller; margin-right: 0.5vh;"><b>101</b></span>
+                                        <span style="font-size:smaller; margin-right: 0.5vh;"><b>|</b></span>
+                                        <i class="fa-regular fa-circle-down"></i>
+                                        <span style="font-size:smaller"><b>100</b></span>
+                                    </div>
+                                    <div class="comments-cont">
+                                        <i class="fa-regular fa-comment-dots"></i>
+                                        <span style="font-size:smaller"><b>0</b></span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-        
-                </div>
+            
+                    </div>    
 
                 <!-- Post Container -->
                 <div class="row post">
@@ -253,7 +253,6 @@
 
                 <!-- Post Container -->
                 <div class="row post">
-
                     <!-- Profile Picture -->
                     <div class="col-1">
                         <img src="img/profile.png" class="profile-pic">
@@ -291,8 +290,9 @@
                     </div>
         
                 </div>
+
                 <!-- Post Container -->
-                <div class="row post">
+                <div class="post row">
 
                     <!-- Profile Picture -->
                     <div class="col-1">
@@ -453,21 +453,8 @@
     <!-- Fontawesome JS -->
     <script src="https://kit.fontawesome.com/8fc6c81a17.js" crossorigin="anonymous"></script>
 
-    <script type="text/javascript">
-        document.addEventListener("DOMContentLoaded", function() {
-        // Get the query parameter from the URL
-        var queryParams = new URLSearchParams(window.location.search);
-        var msg = queryParams.get("msg");
-        // Check if the message is "logout" and display the logout message
-        if (msg === "logout") {
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/staple.js"></script>
 
-            $('#logoutModal').modal('show');
-
-            setTimeout(function() {
-                $('#logoutModal').modal('hide');
-            }, 1500)
-        }
-    });
-  </script>
 </body>
 </html>
