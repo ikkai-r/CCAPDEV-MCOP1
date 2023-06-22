@@ -644,3 +644,28 @@ button.active div {
     background-color: #AD8156;
     cursor: pointer;
 }
+
+/* Create Post*/
+.create-post {
+    position: fixed; 
+    bottom: 30px; 
+    right: 30px; 
+    z-index: 1; 
+    background-color: #8D5821; 
+    width: 25vh; 
+    height: 7vh;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.create-post-style {
+    font-size: xx-large;
+    color: white;
+}
+
+.create-post:hover {
+    cursor: pointer;
+    background-color: #543515;
+}
