@@ -388,9 +388,13 @@ button.active div {
     width:100%;
     border: none;
     color: #919191;
+    
     font-weight: bolder;
     font-size: 3.5vh;
+    
     resize: none;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .post-creator-posted-by {
