@@ -376,15 +376,15 @@ button.active div {
 .post-creator {
     width: 270vh;
     padding: 2.5vh;
-    margin-bottom: 3vh;
     background-color: #FFFFFF;
+    height: fit-content;
 }
 
 .post-creator-delete{
     float: right;
 }
 
-.post-creator-title {
+.post-creator-title, .post-creator-title::placeholder{
     width:100%;
     border: none;
     color: #919191;
@@ -408,8 +408,15 @@ button.active div {
     overflow-y: auto;
     resize: none;
     width:100%;
-    height: auto;
+    height: fit-content;
 }
+
+[contenteditable][placeholder]:empty:before {
+    content: attr(placeholder);
+    color: gray;
+    background-color: transparent;
+  }
+  
 
 .post-creator-add-tag {
     width:100%;
@@ -418,6 +425,7 @@ button.active div {
     color: #919191;
     font-weight: bolder;
     font-size: 1.3vh;
+    outline: none;
     resize: none;
     margin-bottom: 1.5vh;
 }
