@@ -23,3 +23,9 @@ var saveChanges = function () {
 }
 
 var logoutButton = document.getElementById("logout-btn");
+
+$(document).ready(function() {
+    $('.tag-group').click(function() {
+      window.location.href = 'view-tag.html';
+    });
+});
