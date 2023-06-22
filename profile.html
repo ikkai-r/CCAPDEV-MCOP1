@@ -48,7 +48,7 @@
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end profile-dropdown" aria-labelledby="navbar-logged-in">
                       <li><a class="dropdown-item profile-dd-item" href="profile.html"><i class="fa-solid fa-user" style="padding-right: 1vh;"></i>Profile</a></li>
-                      <li><a class="dropdown-item profile-dd-item" href="logout.html"><i class="fa-solid fa-arrow-right-from-bracket" style="padding-right: 1vh;"></i>Logout</a></li>
+                      <li><a class="dropdown-item profile-dd-item" href="index.html?msg=logout" id="logout-btn"><i class="fa-solid fa-arrow-right-from-bracket" style="padding-right: 1vh;"></i>Logout</a></li>
                     </ul>
                   </li>
               </ul>
@@ -135,7 +135,7 @@
                     </div>
                     <div style="display: flex; justify-content: center;">
                         <button type="button" class="btn btn-loginreg" style="margin-right: 2vh; margin-left: 2vh; margin-top: -1vh; width: 30vh;" data-bs-dismiss="modal" onclick="backLoad(event)">cancel</button>
-                        <button type="button" class="btn btn-loginreg" style="margin-right: 2vh; margin-left: 2vh; margin-top: -1vh; width: 30vh;" type="submit" data-bs-dismiss="modal" onclick="saveChanges(event)">save changes</button>
+                        <button type="button" class="btn btn-loginreg" style="margin-right: 2vh; margin-left: 2vh; margin-top: -1vh; width: 30vh;" type="submit" data-bs-dismiss="modal" onclick="saveChanges()">save changes</button>
                     </div>
                 </div>
             </div>
@@ -161,7 +161,7 @@
                     </div>
                     <div class="col-9" style="padding: 2.5vh;">
                         <h3><strong>helpvirus</strong></h3>
-                        <span>i'm a great placeholder, just like how i am easily replaced</span>
+                        <span id="bio-user">i'm a great placeholder, just like how i am easily replaced</span>
                     </div>
                 </div>
 

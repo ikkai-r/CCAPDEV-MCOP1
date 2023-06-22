@@ -1,7 +1,10 @@
+var imageSrc = ""; 
+
 var loadFile = function (event) {
     var image = document.getElementById("edit-pfp");
     image.src = URL.createObjectURL(event.target.files[0]);
     document.getElementById("edit-pfp-bg").style.backgroundImage = "url(" + URL.createObjectURL(event.target.files[0]) + ")"
+    imageSrc = URL.createObjectURL(event.target.files[0]);
 };
 
 var backLoad = function (event) {
@@ -11,7 +14,12 @@ var backLoad = function (event) {
     document.getElementById("bio-area").value = "i'm a great placeholder, just like how i am easily replaced";
 };
 
-var saveChanges = function (event) {
-    var image = document.getElementById("upfp");
-    image.src = URL.createObjectURL(event.target.files[0]);
+var saveChanges = function () {
+    if (imageSrc !== "") {  // Check if an image URL is present
+        var image = document.getElementById("upfp");
+        image.src = imageSrc;  // Set the image source to the stored URL
+      }
+      document.getElementById("bio-user").textContent = document.getElementById("bio-area").value;
 }
+
+var logoutButton = document.getElementById("logout-btn");

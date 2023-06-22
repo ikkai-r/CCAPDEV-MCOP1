@@ -38,6 +38,11 @@ body {
 .side-text {
     color: #8D5821;
     font-weight: bold;
+    text-decoration: none;
+}
+
+.side-txt:hover {
+    text-decoration: underline;
 }
 
 .side-cont {
@@ -226,6 +231,10 @@ button.active div {
     font-size: x-large;
 }
 
+.logging-out {
+    font-family: 'Shrikhand', cursive;
+}
+
 .btn-loginreg:hover {
     background-color: #FAEDCD;
     border-color: #FAEDCD;
@@ -303,6 +312,7 @@ button.active div {
 }
 
 .pop-tag {
+    color: #543515;
     font-weight: bolder;
 }
 
