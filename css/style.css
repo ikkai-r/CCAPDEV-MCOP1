@@ -703,3 +703,20 @@ button.active div {
     cursor: pointer;
     background-color: #543515;
 }
+
+/* edit post */
+a {
+    color:inherit;
+}
+
+.fa-pen-to-square:hover {
+    box-shadow: 0 5px 15px #8a816e;
+}
+
+.confirm-delete-modal {
+    padding: 3vh; 
+    border-radius: 50px;
+    background-color: #ffffff;
+    border:none;
+    color: #543515;
+}
