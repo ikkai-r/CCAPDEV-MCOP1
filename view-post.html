@@ -124,26 +124,28 @@
                     <p>
                         btw if you mess with him, you're gonna have a bad time with me
                     </p>
-                    <div>
+                    <div style="display: flex; justify-content: center;" class="mb-4">
                         <img src="img/sans.png" class="viewed-post-img">
                     </div>
-                    <p>
-                        #sans #lorem #ipsum #mybrainisdying #brainrot #undertale #sansismyboyfriend #donttouchhim
-                    </p>
+                        <div class="d-flex">
+                            <span class="postcom-tags post-tags-cont">#sans</span>
+                            <span class="postcom-tags post-tags-cont">#mybrainisdying</span>
+                             <span class="postcom-tags post-tags-cont">#undertale</span>
+                         </div>
                     <div class="actions-cont viewed-post-actions mb-3 mt-3">
-                        <div class="share-cont">
+                        <div class="share-cont" id="share-btn">
                             <i class="fa-regular fa-share-from-square"></i>
                         </div>
                         <div class="votes-cont">
-                            <i class="fa-solid fa-circle-up"></i>
-                            <span style="font-size:smaller; margin-right: 0.5vh;"><b>101</b></span>
+                            <i class="fa-solid fa-circle-up" id="upvote-btn"></i>
+                            <span style="font-size:smaller; margin-right: 0.5vh;" id="upvote-amnt"><b>101</b></span>
                             <span style="font-size:smaller; margin-right: 0.5vh;"><b>|</b></span>
-                            <i class="fa-regular fa-circle-down"></i>
-                            <span style="font-size:smaller"><b>100</b></span>
+                            <i class="fa-regular fa-circle-down" id="downvote-btn"></i>
+                            <span style="font-size:smaller"  id="downvote-amnt"><b>100</b></span>
                         </div>
                         <div class="comments-cont">
                             <i class="fa-regular fa-comment-dots"></i>
-                            <span style="font-size:smaller"><b>10</b></span>
+                            <span style="font-size:smaller" id="comment-amnt"><b>10</b></span>
                         </div>
                     </div>
                 </div>
