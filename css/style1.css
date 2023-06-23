@@ -386,8 +386,8 @@ button.active div {
     border-top-right-radius: 14px;
     border-bottom-right-radius: 14px;
     padding: 10px 8px;
-
     position: relative;
+    overflow: hidden;
 }
 
 
