@@ -75,3 +75,10 @@ commentContainer.addEventListener("click", function(e){
     // }
 });
 
+function copyLink() {
+    navigator.clipboard.writeText("view-post.html");
+    alert("Copied the text ");
+
+}
+
+
