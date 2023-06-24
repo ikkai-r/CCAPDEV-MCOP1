@@ -370,6 +370,15 @@ button.active div {
 
 }
 
+.fa {
+    background: none;
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+}
+
 
 .left-bar-footer {
     position: absolute;
