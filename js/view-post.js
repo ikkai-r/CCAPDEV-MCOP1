@@ -4,13 +4,13 @@ let commentContainer = document.getElementById("comment");
 
 function createTextarea (){
     let div = document.createElement("div");
-    div.setAttribute("class", "comment-textarea");
+    div.setAttribute("class", "commenting mt-2");
 
     div.innerHTML += `
-    <div class="comment-textarea" contenteditable="true" placeholder="add text here" ></div>
+    <textarea class="comment-textarea" contenteditable="true" placeholder="add text here" ></textarea>
     <div class="d-flex justify-content-between">
-        <button class="comment-pill" id="comment-cancel" style="background-color: #DBDBDB;">cancel</button>
-        <button class="submit-comment comment-pill" id="submit-comment" style="background-color: #D4A373;">send</button>
+        <button class="cancel-comment pill" id="comment-cancel" style="background-color: #DBDBDB;">cancel</button>
+        <button class="submit-comment pill" id="submit-comment" style="background-color: #D4A373;">send</button>
     </div>`;
 
     return div;
@@ -47,7 +47,8 @@ function addReply(text) {
 
 commentContainer.addEventListener("click", function(e){
     let replyClicked = e.target.classList.contains("comment-reply");
-    // let submitClicked = e.target.;
+    let submitClicked = e.target.classList.contains("submit-comment pill");
+    let cancelClicked = e.target.classList.contains("cancel-comment pill");
     let closest = e.target.closest(".all-comment");
 
     if (replyClicked){
@@ -55,10 +56,16 @@ commentContainer.addEventListener("click", function(e){
         closest.appendChild(createTextarea ());
     }
 
+    if (cancelClicked){
+        console.log("cancel clicked!");
+        const commentTextarea = e.target.closest(".commenting");
+        commentTextarea.remove();
+    }
+
     document.getElementById("submit-comment").onclick = function submitComment() {
         console.log("submit-button clicked!");
-        const commentTextarea = e.target.closest(".comment-textarea");
-        if (commentTextarea.children.value[0]) {
+        const commentTextarea = e.target.closest(".commenting");
+        if (commentTextarea.children[0].value) {
             closest.appendChild(addReply(commentTextarea.children[0].value));
             commentTextarea.remove();
         }
