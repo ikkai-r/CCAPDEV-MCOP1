@@ -735,6 +735,7 @@ a {
     background-color: #ffffff;
     border:none;
     color: #543515;
+}
 
 #search-popup {
     display: none;
@@ -767,5 +768,4 @@ a {
     background: #333;
     color: #fff;
     border: none;
-
 }
