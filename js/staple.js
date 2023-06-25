@@ -18,3 +18,21 @@ function copyLink(url) {
         $('#copyLinkModal').modal('hide');
     }, 1500)
 }
+
+function convertDateToTxt() {
+    const date = new Date();
+    const monthNames = [
+        "January", "February", "March", "April", "May", "June", 
+        "July", "August", "September", "October", "November", "December"
+      ];
+    
+    let day = date.getDate();
+    let month = date.getMonth();
+    let year = date.getFullYear();
+
+    // Format the date
+    let formattedDate = monthNames[month] + " " + day + ", " + year;
+    
+    return formattedDate;
+          
+}

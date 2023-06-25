@@ -51,6 +51,12 @@ a:hover {
     text-decoration: none;
 }
 
+#tag-grp {
+    margin-top: 2vh;
+    overflow: hidden;
+    flex-wrap: wrap;
+}
+
 .side-txt:hover {
     text-decoration: underline;
 }
@@ -430,6 +436,7 @@ button.active div {
 /* Post Creator Style */
 .post-creator {
     width: 270vh;
+    max-width: 270vh;
     padding: 2.5vh;
     background-color: #FFFFFF;
     height: fit-content;
