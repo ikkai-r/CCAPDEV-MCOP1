@@ -591,6 +591,10 @@ button.active div {
     width: 30%
 }
 
+a {
+    color: inherit;
+}
+
 .viewed-post-actions{
     display: flex;
     justify-content: flex-end;
