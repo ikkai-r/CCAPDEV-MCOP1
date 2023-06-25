@@ -42,14 +42,10 @@
                 <li class="nav-item">
                   <a class="nav-link" aria-current="page" href="view-tags.html"><i class="nav-icons fa-solid fa-hashtag"></i></a>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <li class="nav-item">
+                    <a class="nav-link" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="modal"  data-bs-target="#loginModal" aria-expanded="false">
                         <i class="nav-icons fa-solid fa-circle-user"></i>
                     </a>
-                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDarkDropdownMenuLink">
-                      <li><a class="dropdown-item" href="profile.html">Profile</a></li>
-                      <li><a class="dropdown-item" href="logout.html">Logout</a></li>
-                    </ul>
                   </li>
               </ul>
             </div>
@@ -135,10 +131,10 @@
     </div>
 
     <!-- Create a Post-->
-    <a href="post.html"><div class="create-post">
+    <div class="create-post" data-bs-toggle="modal" data-bs-target="#loginModal">
         <i class="fa-solid fa-circle-plus create-post-style" style="margin-right: 15px"></i>
         <h4 class="create-post-style mt-2"><b>Post</b></h4>
-    </div></a>
+    </div>
 
       <!-- Content Body -->
       <div class="container mt-4 pt-3">
@@ -148,11 +144,6 @@
             <div class="container flex-grow-1 profile">
 
                 <!-- Profile Proper -->
-                <div class="row">
-                    <div class="col-12 d-flex justify-content-end">
-                        <i class="fa-regular fa-pen-to-square edit-profile-icon" data-bs-toggle="modal" data-bs-target="#edProfModal"></i>
-                    </div>
-                </div>
                 <div class="row d-flex align-items-center">
                     <div class="col-3">
                         <img src="img/coolbeans.png" class="user-profile-pic">
@@ -199,7 +190,6 @@
 
                                             <div class="d-flex justify-content-between">
                                                 <h5 class="post-title"><b><a href="coolbeans_post.html">RIP Telltale</a></b></h5>
-                                                <i class="fa-regular fa-pen-to-square"></i>
                                             </div>
                                            
                                             <span class="post-info">posted by <a href="coolbeans.html">coolbeans</a> on May 5, 2023</span>
@@ -244,16 +234,19 @@
 
                                         <div class="d-flex justify-content-between">
                                             <h6 class="comment-title"><b><a href="coolbeans_post.html">RIP Telltale</a></b></h6> 
-                                            <span class="postcom-tags tags-cont">#mc #minecraft #miss #lukas #iloveyou</span>
+                                            <div class="d-flex">
+                                                <span class="postcom-tags post-tags-cont">#mc</span>
+                                                <span class="postcom-tags post-tags-cont">#minecraft</span>
+                                                <span class="postcom-tags post-tags-cont">#miss</span>
+                                                <span class="postcom-tags post-tags-cont">#lukas</span>
+                                                <span class="postcom-tags post-tags-cont">#iloveyou</span>
+                                            </div>
                                         </div>
                                        
                                         <span class="comment-info"><a href="coolbeans.html">coolbeans</a> commented on May 6, 2023</span>
                                         <p class="post-content pt-2">is it time to pirate</p>
                                         <div class="d-flex justify-content-between">
-                                            <div class="share-cont">
-                                                <i class="fa-regular fa-pen-to-square"></i>
-                                            </div>
-                                            <div class="actions-cont d-flex">
+                                            <div class="actions-cont d-flex justify-content-end" style="width: 100%;">
                                                 <div class="share-cont">
                                                     <i class="fa-regular fa-share-from-square"></i>
                                                 </div>
@@ -266,7 +259,7 @@
                                                 </div>
                                                 <div class="comments-cont">
                                                     <i class="fa-regular fa-comment-dots"></i>
-                                                    <span style="font-size:smaller"><b>Reply</b></span>
+                                                    <span style="font-size:smaller"><b>0</b></span>
                                                 </div>
                                             </div>
                                         </div>

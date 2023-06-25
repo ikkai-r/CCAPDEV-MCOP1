@@ -555,7 +555,7 @@ button.active div {
 
 /* Commenting */
 .comment {
-    margin-top: 1vh;
+    margin-top: 2vh;
 }
 
 .comment-username {
@@ -569,24 +569,20 @@ button.active div {
 }
 
 .comment-profile-pic {
-    width:4vh;
-    height: 4vh;
+    width:5.3vh;
+    height: 5.3vh;
     border-radius: 50%;
 }
 
-.comment-content, .comment-reply, .comment-hide-reply {
+.comment-content, .comment-reply, .comment-time-reply {
     font-size: 0.9em;
     margin-top:1vh;
     margin-bottom:1vh;
 }
 
-.comment-reply, .comment-hide-reply {
+.comment-reply {
     font-weight: bold;
     cursor:pointer;
-}
-
-.comment-hide-reply {
-    text-decoration: underline;
 }
 
 .comment-textarea {
