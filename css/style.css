@@ -45,6 +45,52 @@ a:hover {
     color: #543515;
 }
 
+.search-modal {
+    background-color: #FFFFFF;
+    border-radius: 50px;
+    display:flex;
+    margin-top: 30%;
+    margin-left: 99%;
+    padding: 0;
+}
+
+.search-input{
+    border:none;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+
+    margin:16px;
+
+    color: #000000;
+    caret-color: #AD8156;
+    width: 100%;
+}
+
+.search-input:focus{
+    outline: none;
+}
+
+.search-modal-body {
+    padding:0;
+}
+
+.search-confirm{
+    height: 100%;
+    background-color: #D4A373;
+    
+    border: none;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    padding:16px;
+    padding-left: 30px;
+    padding-bottom:18px;
+    padding-right: 30px;
+}
+
+.search-confirm:hover{
+    background-color: #ecc59e;
+}
+
 .side-text {
     color: #8D5821;
     font-weight: bold;
