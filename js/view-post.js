@@ -1,6 +1,13 @@
 // Reference Code: https://youtu.be/a4OA7QbHEho
 
+
 let commentContainer = document.getElementById("comment");
+let shareButton = document.querySelector(".share-cont");
+let upvoteAlready = false;
+let upvote = document.querySelector(".votes-cont i.fa-circle-up");
+let downvoteAlready = false;
+let downvote = document.querySelector(".votes-cont i.fa-circle-down");
+console.log(upvote);
 
 function createTextarea (){
     let div = document.createElement("div");
@@ -76,65 +83,64 @@ commentContainer.addEventListener("click", function(e){
 });
 
 function copyLink() {
-    navigator.clipboard.writeText("view-post.html");
+    let link = window.location.href;
+    navigator.clipboard.writeText(link);
+    alert("Copied share link!");
+
 }
 
-$(".upvote-btn").click(function () {
+shareButton.addEventListener("click", function(){
+    console.log("share link clicked!");
+    copyLink();
+    
+});
 
-    if($(this).hasClass('fa-regular')) {
-        $(this).removeClass('fa-regular');
-        $(this).addClass('fa-solid');
+upvote.addEventListener("click", function(){
+    let upvoteNumber = document.querySelectorAll(".votes-cont span")[0].innerText;
+    let downvoteNumber = document.querySelectorAll(".votes-cont span")[2].innerText;
+    
+    if (downvoteAlready && !upvoteAlready){
+        console.log(upvoteNumber + " prior upvotes - post has already been downvoted. removed the downvote and upvoted the post instead")
+        document.querySelectorAll(".votes-cont span")[2].innerHTML = parseInt(downvoteNumber) - 1;
+        document.querySelectorAll(".votes-cont span")[0].innerHTML = parseInt(upvoteNumber) + 1;
+        upvoteAlready = true;
+        downvoteAlready = false;
 
-        if(!$(this).hasClass('clicked')) {
-            var currentUpvotes = parseInt($('#upvote-amnt').text());
-            $('#upvote-amnt').text(currentUpvotes+1);
-        } 
-
-        $(this).addClass('clicked');
-        $(this).removeClass('unclicked');
-
-    } else {
-        $(this).removeClass('fa-solid');
-        $(this).addClass('fa-regular');
-
-        if(!$(this).hasClass('unclicked')) {
-            var currentUpvotes = parseInt($('#upvote-amnt').text());
-            $('#upvote-amnt').text(currentUpvotes-1);
-        } 
-
-        $(this).addClass('unclicked');
-        $(this).removeClass('clicked');
+    }
+    else if (!upvoteAlready){
+        document.querySelectorAll(".votes-cont span")[0].innerHTML = parseInt(upvoteNumber) + 1;
+        console.log(upvoteNumber + " prior upvotes - upvoted the post!");
+        upvoteAlready = true;
+    }
+    else{
+        console.log("post has been already upvoted");
     }
     
-})
+    
+});
 
 
-$(".downvote-btn").click(function () {
+downvote.addEventListener("click", function(){
+    let upvoteNumber = document.querySelectorAll(".votes-cont span")[0].innerText;
+    let downvoteNumber = document.querySelectorAll(".votes-cont span")[2].innerText;
+    
+    if (upvoteAlready && !downvoteAlready){
+        console.log(downvoteNumber + " prior downvotes - post has already been upvoted. removed the upvoted and downvoted the post instead")
+        document.querySelectorAll(".votes-cont span")[0].innerHTML = parseInt(upvoteNumber) - 1;
+        document.querySelectorAll(".votes-cont span")[2].innerHTML = parseInt(downvoteNumber) + 1;
+        downvoteAlready = true;
+        upvoteAlready = false;
 
-    if($(this).hasClass('fa-regular') ) {
-        $(this).removeClass('fa-regular');
-        $(this).addClass('fa-solid');
-
-        if(!$(this).hasClass('clicked')) {
-            var currentdownvotes = parseInt($('#downvote-amnt').text());
-            $('#downvote-amnt').text(currentdownvotes+1);
-        } 
-
-        $(this).addClass('clicked');
-        $(this).removeClass('unclicked');
-
-    } else {
-        $(this).removeClass('fa-solid');
-        $(this).addClass('fa-regular');
-
-        if(!$(this).hasClass('unclicked')) {
-            var currentdownvotes = parseInt($('#downvote-amnt').text());
-            $('#downvote-amnt').text(currentdownvotes-1);
-        } 
-
-        $(this).addClass('unclicked');
-        $(this).removeClass('clicked');
+    }
+    else if (!downvoteAlready){
+        document.querySelectorAll(".votes-cont span")[2].innerHTML = parseInt(downvoteNumber) + 1;
+        console.log(downvoteNumber + " prior downvotes - downvoted the post!");
+        downvoteAlready = true;
+    }
+    else{
+        console.log("post has been already downvoted");
     }
     
-})
+    
+});
 
