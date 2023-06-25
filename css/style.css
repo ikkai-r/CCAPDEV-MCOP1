@@ -704,6 +704,23 @@ button.active div {
     background-color: #543515;
 }
 
+
+/* edit post */
+a {
+    color:inherit;
+}
+
+.fa-pen-to-square:hover {
+    box-shadow: 0 5px 15px #8a816e;
+}
+
+.confirm-delete-modal {
+    padding: 3vh; 
+    border-radius: 50px;
+    background-color: #ffffff;
+    border:none;
+    color: #543515;
+
 #search-popup {
     display: none;
     position: fixed;
@@ -735,4 +752,5 @@ button.active div {
     background: #333;
     color: #fff;
     border: none;
+
 }
