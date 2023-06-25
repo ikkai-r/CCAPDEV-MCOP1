@@ -3,6 +3,13 @@
 let commentContainer = document.getElementById("comment-container");
 var isCommenting = 0;
 
+let shareButton = document.querySelector(".share-cont");
+let upvoteAlready = false;
+let upvote = document.querySelector(".votes-cont i.fa-circle-up");
+let downvoteAlready = false;
+let downvote = document.querySelector(".votes-cont i.fa-circle-down");
+console.log(upvote);
+
 function createTextarea (){
     let div = document.createElement("div");
     div.setAttribute("class", "commenting mt-2");
@@ -105,4 +112,58 @@ function copyLink() {
     alert("Copied the text ");
 }
 
+shareButton.addEventListener("click", function(){
+    console.log("share link clicked!");
+    copyLink();
+    
+});
+
+upvote.addEventListener("click", function(){
+    let upvoteNumber = document.querySelectorAll(".votes-cont span")[0].innerText;
+    let downvoteNumber = document.querySelectorAll(".votes-cont span")[2].innerText;
+    
+    if (downvoteAlready && !upvoteAlready){
+        console.log(upvoteNumber + " prior upvotes - post has already been downvoted. removed the downvote and upvoted the post instead")
+        document.querySelectorAll(".votes-cont span")[2].innerHTML = parseInt(downvoteNumber) - 1;
+        document.querySelectorAll(".votes-cont span")[0].innerHTML = parseInt(upvoteNumber) + 1;
+        upvoteAlready = true;
+        downvoteAlready = false;
+
+    }
+    else if (!upvoteAlready){
+        document.querySelectorAll(".votes-cont span")[0].innerHTML = parseInt(upvoteNumber) + 1;
+        console.log(upvoteNumber + " prior upvotes - upvoted the post!");
+        upvoteAlready = true;
+    }
+    else{
+        console.log("post has been already upvoted");
+    }
+    
+    
+});
+
+
+downvote.addEventListener("click", function(){
+    let upvoteNumber = document.querySelectorAll(".votes-cont span")[0].innerText;
+    let downvoteNumber = document.querySelectorAll(".votes-cont span")[2].innerText;
+    
+    if (upvoteAlready && !downvoteAlready){
+        console.log(downvoteNumber + " prior downvotes - post has already been upvoted. removed the upvoted and downvoted the post instead")
+        document.querySelectorAll(".votes-cont span")[0].innerHTML = parseInt(upvoteNumber) - 1;
+        document.querySelectorAll(".votes-cont span")[2].innerHTML = parseInt(downvoteNumber) + 1;
+        downvoteAlready = true;
+        upvoteAlready = false;
+
+    }
+    else if (!downvoteAlready){
+        document.querySelectorAll(".votes-cont span")[2].innerHTML = parseInt(downvoteNumber) + 1;
+        console.log(downvoteNumber + " prior downvotes - downvoted the post!");
+        downvoteAlready = true;
+    }
+    else{
+        console.log("post has been already downvoted");
+    }
+    
+    
+});
 

@@ -25,6 +25,7 @@
     <title>Discusso</title>
 </head>
 <body>
+
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg sticky-top">
         <div class="container-fluid" style="padding-left: 50px; padding-right: 50px">
@@ -40,10 +41,10 @@
                     <a class="nav-link active" aria-current="page" href="#"><i class="nav-icons fa-solid fa-magnifying-glass"></i></a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="view-tags.html"><i class="nav-icons fa-solid fa-hashtag"></i></a>
+                <a class="nav-link active" aria-current="page" href="view-tags.html"><i class="nav-icons fa-solid fa-hashtag"></i></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="#"><i class="nav-icons fa-solid fa-circle-user" data-bs-toggle="modal" data-bs-target="#loginModal"></i></a>
+                    <a class="nav-link active" aria-current="page" href="#"><i class="nav-icons fa-solid fa-circle-user" data-bs-toggle="modal" data-bs-target="#loginModal"></i></a>
                 </li>
             </ul>
             </div>
@@ -101,207 +102,171 @@
                 </div>
             </div>
         </div>
-    </div>
-
-    <a href="post.html"><div class="create-post">
-        <i class="fa-solid fa-circle-plus create-post-style" style="margin-right: 15px"></i>
-        <h4 class="create-post-style mt-2"><b>Post</b></h4>
-    </div></a>
-      <!-- Content Body -->
-      <div class="container mt-4 pt-3">
+    </div> 
+        
+    
+    <!-- Edit post page -->
+    <div class="container mt-4 pt-3">
+        <h1 class="header-text">Edit New Post</h1>
         <div class="container d-flex content-container mt-4">
+            <!-- All Posts Container -->
+            <div class="post-creator">
+                <!-- Delete button -->
+                <div class="post-creator-delete">
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#post-creator-confirm-delete">
+                        <i class="fa-regular fa-trash-can"></i>
+                    </button>
+                </div>
 
-            
-            <!-- View Post Container -->
-            <div class="container viewed-post">
-                <div class="viewed-post-container mb-4">
-                    <h2>undertale sans is so cool</h2>
-                    <p class="post-creator-posted-by">posted by <a href="sansfangirlxoxo.html">sansfangirlxoxo</a> on May 1, 2023</p>
-                    <p>
-                        omg pls be my boyfriend like look at him, why is he so cool???? i can't exist without him, why does he not exist irl? like ugh, i can't stop thinking about him, i'd laugh at his jokes and chill with his bro papyrus
-                        comic sans is soooo cool too
-                    </p>
-                    <p>
-                        btw if you mess with him, you're gonna have a bad time with me
-                    </p>
-                    <div style="display: flex; justify-content: center;" class="mb-4">
-                        <img src="img/sans.png" class="viewed-post-img">
-                    </div>
-                        <div class="d-flex">
-                            <span class="postcom-tags post-tags-cont">#sans</span>
-                            <span class="postcom-tags post-tags-cont">#lorem</span>
-                             <span class="postcom-tags post-tags-cont">#ipsum</span>
-                             <span class="postcom-tags post-tags-cont">#mybrainisdying</span>
-                             <span class="postcom-tags post-tags-cont">#brainrot</span>
-                             <span class="postcom-tags post-tags-cont">#undertale</span>
-                             <span class="postcom-tags post-tags-cont">#sansismyboyfriend</span>
-                             <span class="postcom-tags post-tags-cont">#donttouchhim</span>
-                         </div>
-                    <div class="actions-cont viewed-post-actions mb-3 mt-3">
-                        <div class="share-cont" id="share-btn" onclick="copyLink()">
-                            <i class="fa-regular fa-share-from-square"></i>
-                        </div>
-                        <div class="votes-cont">
-                            <i class="fa-solid fa-circle-up" id="upvote-btn" onclick="copyLink()"></i>
-                            <span style="font-size:smaller; margin-right: 0.5vh;" id="upvote-amnt"><b>0</b></span>
-                            <span style="font-size:smaller; margin-right: 0.5vh;"><b>|</b></span>
-                            <i class="fa-regular fa-circle-down" id="downvote-btn"></i>
-                            <span style="font-size:smaller"  id="downvote-amnt"><b>23</b></span>
-                        </div>
-                        <div class="comments-cont">
-                            <i class="fa-regular fa-comment-dots"></i>
-                            <span style="font-size:smaller" id="comment-amnt"><b>1</b></span>
+                <!-- Confirm Delete Modal -->
+                <div class="modal fade" id="post-creator-confirm-delete" tabindex="-1" aria-labelledby="post-creator-confirm-delete" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" style="width: 40vh;">
+                        
+                        <div class="container">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="width: 75vh; font-size: 1.3rem "></button>
+                            <div class="modal-content confirm-delete-modal">
+                                <div class="modal-body" style="font-weight: bold; font-size: 1.4em;">
+                                    Confirm deletion?
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <button type="button" class="btn pill" data-bs-dismiss="modal" style="background-color: #dbdbdb;">cancel</button>
+                                    <a href="index.html"><button type="button" class="btn pill" style="background-color: #D4A373;">confirm</button></a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                
-                
-                <h3>Comments (1)</h3>
-                <!-- Comment portion -->
 
-                <div class="comment-container" id="comment-container">
-                    <div class="all-comment">
-                        <div class="row comment" id="comment">
-                            <!-- Votes. Except the icons wont appear im crying -->
-                            <div class="col-1" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
-                                <div><i class="fa-regular fa-circle-up" style="color: #292F33; font-size: x-large"></i></div>
-                                <div class="comment-vote-cont">2</div>
-                                <div><i class="fa-regular fa-circle-down" style="color: #292F33; font-size: x-large"></i></div>
-                            </div>
-                            <div class="col-11">
-                                <!-- Username and Date Commented -->
-                                <div class="row">
-                                    <div class="col-1">
-                                        <img src="img/profile-pic.png" class="comment-profile-pic">
-                                    </div>
-                                    <div class="col-11">
-                                        <div class="comment-username">CreativeUsername</div>
-                                        <div class="comment-username">May 23, 2023</div>
-                                    </div>
-                                </div>
-                                <!-- Comment contents -->
-                                <div class="comment-content">
-                                    umm are you sure you're old enough to be on this site
-                                </div>
-                                <span id="comment-reply"class="comment-reply">reply</span>
-                                <span class="comment-hide-reply">hide replies</span>
-                            </div>
-                        </div>
-                    </div>
+                <textarea class="post-creator-title" rows="1" placeholder="type your title here">help my computer is dying
+                </textarea>
+                <p class="post-creator-posted-by">posted by thetotallyrealjack on May 23, 2023</p>
+                <div class="textarea post-creator-description" contenteditable="true" placeholder="Enter your description here" oninput="if(this.innerHTML.trim()==='<br>')this.innerHTML=''">
+                    help i think i made a mistake, i downloaded this "free cool toolbar" extension and uploaded it 
+                    on google drive; and now my computer does not work anymore, please help what do i do
+                </div>
+                <div class="post-creator-add-tag" contenteditable="true" placeholder="#add your tags here" oninput="if(this.innerHTML.trim()==='<br>')this.innerHTML=''">
+                    #virus #ohgosh #aaa
+                </div>
+                <div class="post-creator-buttons">
+                    <a href="index.html">
+                        <button class="pill post-creator-cancel">cancel</button>
+                    </a>
+                    <a href="index.html">
+                        <button class="pill post-creator-post">post</button>
+                    </a>
                 </div>
             </div>
             
-            <!-- Side Container -->
+
+
             <div class="container-sm">
 
                 <!-- Popular Tags -->
                 <div class="container side-cont pt-4">
                     <h5 class="side-text">popular tags</h5>
                     <div class="line"></div>
-
+        
                     <div class="container d-flex mt-2 justify-content-between">
                         <h6 class="pop-tag">#sans (2000)</h6>
                         <i class="fa-solid fa-circle-plus add-tag"></i>
                     </div>
-
+        
                     <div class="container d-flex mt-2 justify-content-between">
                         <h6 class="pop-tag">#news (1042)</h6>
                         <i class="fa-solid fa-circle-plus add-tag"></i>
                     </div>
-
+        
                     <div class="container d-flex mt-2 justify-content-between">
                         <h6 class="pop-tag">#gaming (510)</h6>
                         <i class="fa-solid fa-circle-plus add-tag"></i>
                     </div>
-
+        
                     <div class="container d-flex mt-2 justify-content-between">
                         <h6 class="pop-tag">#hash (420)</h6>
                         <i class="fa-solid fa-circle-plus add-tag"></i>
                     </div>
-
+        
                     <div class="container d-flex mt-2 justify-content-between">
                         <h6 class="pop-tag">#wow (312)</h6>
                         <i class="fa-solid fa-circle-plus add-tag"></i>
                     </div>
-
+        
                     <div class="container d-flex mt-2 justify-content-between">
                         <h6 class="pop-tag">#corruption (231)</h6>
                         <i class="fa-solid fa-circle-plus add-tag"></i>
                     </div>
-
+        
                 </div>
-
+        
                 <!-- Latest Posts -->
                 <div class="container side-cont mt-4 pt-4">
                     <h5 class="side-text">latest posts</h5>
                     <div class="line"></div>
-
+        
                     <div class="row d-flex mt-2 justify-content-between">
                             <div class="col-2">
-                                <img src="img/profile.png" class="profile-pic">
+                                <img src="img/profile-pic.png" class="profile-pic">
                             </div>
                             <div class="col-10">
-                                <p class="side-post-title"><b><a href="profile_post.html">help my computer is dying</a></b></p>
-                                <span class="side-post-info">posted by <a href="profile.html">helpvirus</a> on May 25, 2023</span>
+                                <p class="side-post-title"><b>i don't know how to use this canva</b></p>
+                                <span class="side-post-info">posted by helpvirus on May 25, 2023</span>
                             </div>
                     </div>
                     
                     <div class="side-line mt-3"></div>
-
+        
                     <div class="row d-flex mt-2 justify-content-between">
                         <div class="col-2">
-                            <img src="img/sherlockholmes.png" class="profile-pic">
+                            <img src="img/profile-pic.png" class="profile-pic">
                         </div>
                         <div class="col-10">
-                            <p class="side-post-title"><b><a href="sherlockholmes_post.html">A POST</a></b></p>
-                            <span class="side-post-info">posted by <a href="sherlockholmes.html">SherlockHolmes</a> on May 20, 2023</span>
+                            <p class="side-post-title"><b>i don't know how to use this canva</b></p>
+                            <span class="side-post-info">posted by helpvirus on May 25, 2023</span>
                         </div>
                 </div>
                 
                 <div class="side-line mt-3"></div>
-
+        
                 <div class="row d-flex mt-2 justify-content-between">
                     <div class="col-2">
-                        <img src="img/redqueen.png" class="profile-pic">
+                        <img src="img/profile-pic.png" class="profile-pic">
                     </div>
                     <div class="col-10">
-                        <p class="side-post-title"><b><a href="redqueen_post.html">OFF WITH THEIR HEADS!!!</a></b></p>
-                        <span class="side-post-info">posted by <a href="redqueen.html">RedQueen</a> on May 15, 2023</span>
+                        <p class="side-post-title"><b>i don't know how to use this canva</b></p>
+                        <span class="side-post-info">posted by helpvirus on May 25, 2023</span>
                     </div>
-            </div>
-            
-            <div class="side-line mt-3"></div>
-            
-            <div class="row d-flex mt-2 justify-content-between">
-                <div class="col-2">
-                    <img src="img/deeznuts.jpg" class="profile-pic">
                 </div>
-                <div class="col-10">
-                    <p class="side-post-title"><b><a href="deeznuts_post.html">Get Coconut'd</a></b></p>
-                    <span class="side-post-info">posted by <a href ="deeznuts.html">DeezNuts</a> on May 10, 2023</span>
+                
+                <div class="side-line mt-3"></div>
+                
+                <div class="row d-flex mt-2 justify-content-between">
+                    <div class="col-2">
+                        <img src="img/profile-pic.png" class="profile-pic">
+                    </div>
+                    <div class="col-10">
+                        <p class="side-post-title"><b>i don't know how to use this canva</b></p>
+                        <span class="side-post-info">posted by helpvirus on May 25, 2023</span>
+                    </div>
                 </div>
-             </div>
-
-             <div class="side-line mt-3"></div>
-            
-             <div class="row d-flex mt-2 justify-content-between">
-                 <div class="col-2">
-                     <img src="img/coolbeans.png" class="profile-pic">
-                 </div>
-                 <div class="col-10">
-                     <p class="side-post-title"><b><a href="coolbeans_post.html">RIP Telltale</a></b></p>
-                     <span class="side-post-info">posted by <a href="coolbeans.html">coolbeans</a> on May 5, 2023</span>
-                 </div>
-              </div>
-            </div>
-
-            </div>
         
+                <div class="side-line mt-3"></div>
+                
+                <div class="row d-flex mt-2 justify-content-between">
+                    <div class="col-2">
+                        <img src="img/profile-pic.png" class="profile-pic">
+                    </div>
+                    <div class="col-10">
+                        <p class="side-post-title"><b>i don't know how to use this canva</b></p>
+                        <span class="side-post-info">posted by helpvirus on May 25, 2023</span>
+                    </div>
+                </div>
+                </div>
+        
+            </div>
         </div>
+    
+    </div>
 
-
-      </div>
-        
     <!-- JQuery JS -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Bootstrap JS -->
@@ -309,6 +274,5 @@
     <!-- Fontawesome JS -->
     <script src="https://kit.fontawesome.com/8fc6c81a17.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="js/staple.js"></script>
-    <script src="js/view-post.js"></script>
 </body>
-</html>
+
