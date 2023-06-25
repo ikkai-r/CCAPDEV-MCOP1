@@ -77,8 +77,64 @@ commentContainer.addEventListener("click", function(e){
 
 function copyLink() {
     navigator.clipboard.writeText("view-post.html");
-    alert("Copied the text ");
-
 }
 
+$(".upvote-btn").click(function () {
+
+    if($(this).hasClass('fa-regular')) {
+        $(this).removeClass('fa-regular');
+        $(this).addClass('fa-solid');
+
+        if(!$(this).hasClass('clicked')) {
+            var currentUpvotes = parseInt($('#upvote-amnt').text());
+            $('#upvote-amnt').text(currentUpvotes+1);
+        } 
+
+        $(this).addClass('clicked');
+        $(this).removeClass('unclicked');
+
+    } else {
+        $(this).removeClass('fa-solid');
+        $(this).addClass('fa-regular');
+
+        if(!$(this).hasClass('unclicked')) {
+            var currentUpvotes = parseInt($('#upvote-amnt').text());
+            $('#upvote-amnt').text(currentUpvotes-1);
+        } 
+
+        $(this).addClass('unclicked');
+        $(this).removeClass('clicked');
+    }
+    
+})
+
+
+$(".downvote-btn").click(function () {
+
+    if($(this).hasClass('fa-regular') ) {
+        $(this).removeClass('fa-regular');
+        $(this).addClass('fa-solid');
+
+        if(!$(this).hasClass('clicked')) {
+            var currentdownvotes = parseInt($('#downvote-amnt').text());
+            $('#downvote-amnt').text(currentdownvotes+1);
+        } 
+
+        $(this).addClass('clicked');
+        $(this).removeClass('unclicked');
+
+    } else {
+        $(this).removeClass('fa-solid');
+        $(this).addClass('fa-regular');
+
+        if(!$(this).hasClass('unclicked')) {
+            var currentdownvotes = parseInt($('#downvote-amnt').text());
+            $('#downvote-amnt').text(currentdownvotes-1);
+        } 
+
+        $(this).addClass('unclicked');
+        $(this).removeClass('clicked');
+    }
+    
+})
 
