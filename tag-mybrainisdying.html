@@ -108,7 +108,7 @@
     <!-- Tags page -->
     <div class="container mt-4 pt-3" id="tags">
         <div class="view-tag-header">
-            <h1 class="header-text">#sans</h1>
+            <h1 class="header-text">#mybrainisdying</h1>
             <div class="tag-post-hder">
                 <div class="tag-post-hd" onclick="tagSub()">
                     <h5 id="subs">Subscribe</h5>
@@ -126,14 +126,13 @@
                 <!-- left bar that cointains upvote, downvote, comment and share buttons -->
                 <div class="tag-post-left-bar">
                     <div class="left-bar-header"> 
-                        <i class="fa fa-regular fa-circle-up" id="upvote-btn"></i>
+                        <i class="fa fa-regular fa-circle-up" oneclick="upvote(this)"></i>
                         <span id="vote-ctr" style="font-size:smaller; margin-right: 5vh;"><b>100</b></span>
                         <i class="fa fa-regular fa-circle-down fa-xl" oneclick="downvote(this)"></i>
-                    
                     </div>
 
                     <div class="left-bar-footer">
-                        <i class="fa fa-regular fa-share-from-square fa-xl" onclick="copyLink()"></i>
+                        <i class="fa fa-regular fa-share-from-square fa-xl"></i>
                     </div>
                 </div>
 
@@ -148,7 +147,7 @@
                         <h7 class="tag-title"><b>undertale sans is so cool</b></h7>   
                     </div>
                     <span class="post-info">posted by <a href="sansfangirlxoxo.html">sansfangirlxoxo</a> on May 1, 2023</span>                    
-                    
+                                        
                     <!-- body of the tag post that contains the post itself --->
                     <div class="right-bar-body">
                         <p class="tag-post-content">omg pls be my boyfriend like look at him, why is he so cool???...</p>
@@ -194,14 +193,6 @@
             } else {
                 document.getElementById("subs").innerHTML = "Subscribe";
             }
-        }
-    </script>
-
-    <script src="js/view-post.js"></script>
-
-    <script>
-        function upvote(icon) {
-
         }
     </script>
 
