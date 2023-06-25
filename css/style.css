@@ -72,6 +72,10 @@ a:hover {
     display: flex;
 }
 
+.postcom-tags:hover {
+    text-decoration: none;
+}
+
 .post-user {
     padding: 2.5vh;
     background-color: #ebebeb;

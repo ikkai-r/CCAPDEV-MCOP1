@@ -117,10 +117,25 @@
         </div>
     </div>
 
+    <!-- Link Copy Modal -->
+    <div class="modal fade" id="copyLinkModal" tabindex="-1" aria-labelledby="copyLinkModal" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" style="width: 40vh;">
+            <div class="container">
+                <div class="modal-content logreg-modal" style="display: flex; align-items: center; text-align: center;">
+                    <div class="modal-body">
+                        <h1 class="logging-out">link copied successfully</h1>
+                        <h4 class="mt-3">share it with anyone!</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="create-post" data-bs-toggle="modal" data-bs-target="#loginModal">
         <i class="fa-solid fa-circle-plus create-post-style" style="margin-right: 15px"></i>
         <h4 class="create-post-style mt-2"><b>Post</b></h4>
     </div>
+
       <!-- Content Body -->
       <div class="container mt-4 pt-3">
 
@@ -129,9 +144,52 @@
 
             <!-- All Posts Container -->
             <div class="container flex-grow-1 posts">
+
+                <!-- Post Container 
                 
+                -->
+                <div class="row post"> 
+
+                    <!-- Profile Picture -->
+                    <div class="col-1">
+                        <img src="img/sansfangirlxoxo.png" class="profile-pic">
+                    </div>
+
+                    <!-- Post Proper -->
+                    <div class="col-11">
+                        <h5 class="post-title"><b><a href="view-post.html">undertale sans is so cool</a></b></h5>
+                        <span class="post-info">posted by <a href="sansfangirlxoxo.html">sansfangirlxoxo</a> on May 1, 2023</span>
+                        <p class="post-content pt-2">omg pls be my boyfriend like look at him, why is he so cool???? i can't exist without him...</p>
+                        <div class="d-flex justify-content-between">
+                            <div class="d-flex">
+                               <a href="tag.html" class="postcom-tags post-tags-cont">#sans</a>
+                               <a href="tag.html" class="postcom-tags post-tags-cont">#undertale</a>
+                                <a href="tag.html" class="postcom-tags post-tags-cont">#brainrot</a>
+                                <a href="tag.html" class="postcom-tags post-tags-cont">#mybrainisdying</a>
+                            </div>
+                            <div class="actions-cont d-flex">
+                                <div class="share-cont" onclick="copyLink('view-post.html');">
+                                    <i class="fa-regular fa-share-from-square"></i>
+                                </div>
+                                <div class="votes-cont" data-bs-toggle="modal" data-bs-target="#loginModal">
+                                    <i class="fa-regular fa-circle-up"></i>
+                                    <span style="font-size:smaller; margin-right: 0.5vh;"><b>0</b></span>
+                                    <span style="font-size:smaller; margin-right: 0.5vh;"><b>|</b></span>
+                                    <i class="fa-regular fa-circle-down"></i>
+                                    <span style="font-size:smaller"><b>23</b></span>
+                                </div>
+                                <div class="comments-cont" onclick="redirectToPage('view-post.html')">
+                                    <i class="fa-regular fa-comment-dots"></i>
+                                    <span style="font-size:smaller"><b>1</b></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+                </div>
+
                 <!-- Post Container -->
-                    <div class="row post">
+                    <div class="row post" onclick="redirectToPage('profile_post.html')">
 
                         <!-- Profile Picture -->
                         <div class="col-1">
@@ -139,6 +197,7 @@
                         </div>
     
                         <!-- Post Proper -->
+                        
                         <div class="col-11">
                             <h5 class="post-title"><b><a href="profile_post.html">help my computer is dying</a></b></h5>
                             <span class="post-info">posted by <a href="profile.html">helpvirus</a> on May 25, 2023</span>
@@ -171,7 +230,7 @@
                     </div>    
 
                 <!-- Post Container -->
-                <div class="row post">
+                <div class="row post" onclick="redirectToPage('sherlockholmes_post.html')">
 
                     <!-- Profile Picture -->
                     <div class="col-1">
@@ -211,7 +270,7 @@
                 </div>
 
                 <!-- Post Container -->
-                <div class="row post">
+                <div class="row post" onclick="redirectToPage('redqueen_post.html')">
 
                     <!-- Profile Picture -->
                     <div class="col-1">
@@ -252,7 +311,7 @@
                 </div>
 
                 <!-- Post Container -->
-                <div class="row post">
+                <div class="row post" onclick="redirectToPage('deeznuts_post.html')">
                     <!-- Profile Picture -->
                     <div class="col-1">
                         <img src="img/deeznuts.jpg" class="profile-pic">
@@ -291,7 +350,7 @@
                 </div>
 
                 <!-- Post Container -->
-                <div class="post row">
+                <div class="post row" onclick="redirectToPage('coolbeans_post.html')">
 
                     <!-- Profile Picture -->
                     <div class="col-1">
@@ -321,48 +380,6 @@
                                     <span style="font-size:smaller; margin-right: 0.5vh;"><b>|</b></span>
                                     <i class="fa-regular fa-circle-down"></i>
                                     <span style="font-size:smaller"><b>4</b></span>
-                                </div>
-                                <div class="comments-cont">
-                                    <i class="fa-regular fa-comment-dots"></i>
-                                    <span style="font-size:smaller"><b>1</b></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-        
-                </div>
-
-                <!-- Post Container -->
-                <div class="row post">
-
-                    <!-- Profile Picture -->
-                    <div class="col-1">
-                        <img src="img/sansfangirlxoxo.png" class="profile-pic">
-                    </div>
-
-                    <!-- Post Proper -->
-                    <div class="col-11">
-                        <h5 class="post-title"><b><a href="view-post.html">undertale sans is so cool</a></b></h5>
-                        <span class="post-info">posted by <a href="sansfangirlxoxo.html">sansfangirlxoxo</a> on May 1, 2023</span>
-                        <p class="post-content pt-2">omg pls be my boyfriend like look at him, why is he so cool???? i can't exist without him...</p>
-                        <div class="d-flex justify-content-between">
-                            <div class="d-flex">
-                               <span class="postcom-tags post-tags-cont">#sans</span>
-                               <span class="postcom-tags post-tags-cont">#lorem</span>
-                                <span class="postcom-tags post-tags-cont">#ipsum</span>
-                                <span class="postcom-tags post-tags-cont">#mybrainisdying</span>
-                                <span class="postcom-tags post-tags-cont">...</span>
-                            </div>
-                            <div class="actions-cont d-flex">
-                                <div class="share-cont">
-                                    <i class="fa-regular fa-share-from-square"></i>
-                                </div>
-                                <div class="votes-cont">
-                                    <i class="fa-solid fa-circle-up"></i>
-                                    <span style="font-size:smaller; margin-right: 0.5vh;"><b>0</b></span>
-                                    <span style="font-size:smaller; margin-right: 0.5vh;"><b>|</b></span>
-                                    <i class="fa-regular fa-circle-down"></i>
-                                    <span style="font-size:smaller"><b>23</b></span>
                                 </div>
                                 <div class="comments-cont">
                                     <i class="fa-regular fa-comment-dots"></i>

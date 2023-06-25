@@ -12,8 +12,6 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 
-$(document).ready(function() {
-    $('.post').click(function() {
-      window.location.href = 'view-post.html';
-    });
-});
+function redirectToPage(url) {
+    window.location.href = url;
+}

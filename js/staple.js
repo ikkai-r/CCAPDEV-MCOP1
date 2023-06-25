@@ -9,3 +9,12 @@ $(".add-tag").click(function () {
     }
     
 })
+
+function copyLink(url) {
+    navigator.clipboard.writeText(url);
+    $('#copyLinkModal').modal('show');
+
+    setTimeout(function() {
+        $('#copyLinkModal').modal('hide');
+    }, 1500)
+}

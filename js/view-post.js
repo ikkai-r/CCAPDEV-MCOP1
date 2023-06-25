@@ -6,11 +6,12 @@ var element;
 
 let alreadyVoted = false;
 
-let shareButton = document.querySelector(".share-cont");
 let upvoteAlready = false;
-let upvote = document.getElementById("upvote-btn");
+let upvote = document.querySelector(".votes-cont i.fa-circle-up");
 let downvoteAlready = false;
 let downvote = document.querySelector(".votes-cont i.fa-circle-down");
+
+let shareButton = document.querySelector(".share-cont");
 
 function createTextarea () {
     let div = document.createElement("div");
@@ -94,9 +95,6 @@ function addReply(text) {
     function updateTimeReply() { 
         var currentTime = new Date();
 
-        console.log(currentTime);
-        console.log(referenceTime);
-
         var timeDiff = Math.floor((currentTime - referenceTime) / 1000);
 
         var timeText;
@@ -155,29 +153,19 @@ $(".comment-container").click(function (e) {
      });
 });
 
-$
-
-function copyLink() {
-    navigator.clipboard.writeText("view-post.html");
-    $('#copyLinkModal').modal('show');
-
-    setTimeout(function() {
-        $('#copyLinkModal').modal('hide');
-    }, 1500)
-}
-
 upvote.addEventListener("click", function(){
     let upvoteNumber = document.querySelectorAll(".votes-cont span")[0].innerText;
     let downvoteNumber = document.querySelectorAll(".votes-cont span")[2].innerText;
     
     if (downvoteAlready && !upvoteAlready){
+        
         document.querySelectorAll(".votes-cont span")[2].innerHTML = parseInt(downvoteNumber) - 1;
         document.querySelectorAll(".votes-cont span")[0].innerHTML = parseInt(upvoteNumber) + 1;
         upvoteAlready = true;
         downvoteAlready = false;
     }
     else if (!upvoteAlready){
-
+        
         document.querySelectorAll(".votes-cont span")[0].innerHTML = parseInt(upvoteNumber) + 1;        upvoteAlready = true;
     }
 
@@ -191,6 +179,7 @@ upvote.addEventListener("click", function(){
 
 
 downvote.addEventListener("click", function(){
+
     let upvoteNumber = document.querySelectorAll(".votes-cont span")[0].innerText;
     let downvoteNumber = document.querySelectorAll(".votes-cont span")[2].innerText;
     
