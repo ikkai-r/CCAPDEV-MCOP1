@@ -25,8 +25,8 @@
 </head>
 <body>
     
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg sticky-top">
+     <!-- Navbar -->
+     <nav class="navbar navbar-expand-lg sticky-top">
         <div class="container-fluid" style="padding-left: 50px; padding-right: 50px">
             <a class="navbar-brand" href="index.html">
                 <img src="img/logo.png" alt="Discusso" width = "170">
@@ -43,12 +43,12 @@
                   <a class="nav-link" aria-current="page" href="view-tags.html"><i class="nav-icons fa-solid fa-hashtag"></i></a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link" href="#" id="navbar-logged-in" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="nav-icons fa-solid fa-circle-user"></i>
                     </a>
-                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDarkDropdownMenuLink">
-                      <li><a class="dropdown-item" href="profile.html">Profile</a></li>
-                      <li><a class="dropdown-item" href="logout.html">Logout</a></li>
+                    <ul class="dropdown-menu dropdown-menu-end profile-dropdown" aria-labelledby="navbar-logged-in">
+                      <li><a class="dropdown-item profile-dd-item" href="profile.html"><i class="fa-solid fa-user" style="padding-right: 1vh;"></i>Profile</a></li>
+                      <li><a class="dropdown-item profile-dd-item" href="index.html?msg=logout" id="logout-btn"><i class="fa-solid fa-arrow-right-from-bracket" style="padding-right: 1vh;"></i>Logout</a></li>
                     </ul>
                   </li>
               </ul>
@@ -308,6 +308,29 @@
                                 </div>
     
 
+                            </div>
+                        </div>
+
+                         <!-- Subscribed Tags Tab -->
+                         <div class="tab-pane fade" id="nav-tags" role="tabpanel" aria-labelledby="nav-tags-tab">
+                            <div class="container">
+                                <div class="row" style="display: flex; justify-content: center;">
+                                    <div class="tag-group col-md-3" style="margin-right: 5vh;">
+                                        <div><h6 class="tag-group-name">#nou</h4></div>
+                                        <div class="tag-group-img" style="background-image:url(img/nou.jpg);"></div>
+                                        <div><h6 class="tag-group-count">702 posts</h4></div>
+                                    </div>
+                                    <div class="tag-group mr-5 col-md-3" style="margin-right: 5vh;">
+                                        <div><h6 class="tag-group-name">#hahafunny</h4></div>
+                                        <div class="tag-group-img" style="background-image:url(img/hahafunny.jpg);"></div>
+                                        <div><h6 class="tag-group-count">4.3k posts</h4></div>
+                                    </div>
+                                    <div class="tag-group mr-5 col-md-3">
+                                        <div><h6 class="tag-group-name">#meme</h4></div>
+                                        <div class="tag-group-img" style="background-image:url(img/meme.jpg);"></div>
+                                        <div><h6 class="tag-group-count">8k posts</h4></div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                       </div>
