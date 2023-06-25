@@ -543,6 +543,11 @@ button.active div {
     border-bottom: 2px solid #919191;
 }
 
+/* Commenting */
+.comment {
+    margin-top: 1vh;
+}
+
 .comment-username {
     font-weight: bold;
     font-size: 0.9em;
@@ -581,8 +586,8 @@ button.active div {
     height: 10vh;
 }
 
-.all-comment::not(:first-child){
-    margin-left:4rem;
+.all-comment:not(:first-child){
+    margin-left:4vh;
 }
 
 /* Edit Profile */
