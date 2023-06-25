@@ -553,6 +553,11 @@ button.active div {
     border-bottom: 2px solid #919191;
 }
 
+/* Commenting */
+.comment {
+    margin-top: 1vh;
+}
+
 .comment-username {
     font-weight: bold;
     font-size: 0.9em;
@@ -591,8 +596,8 @@ button.active div {
     height: 10vh;
 }
 
-.all-comment::not(:first-child){
-    margin-left:4rem;
+.all-comment:not(:first-child){
+    margin-left:4vh;
 }
 
 /* Edit Profile */
@@ -714,6 +719,23 @@ button.active div {
     background-color: #543515;
 }
 
+
+/* edit post */
+a {
+    color:inherit;
+}
+
+.fa-pen-to-square:hover {
+    box-shadow: 0 5px 15px #8a816e;
+}
+
+.confirm-delete-modal {
+    padding: 3vh; 
+    border-radius: 50px;
+    background-color: #ffffff;
+    border:none;
+    color: #543515;
+
 #search-popup {
     display: none;
     position: fixed;
@@ -745,4 +767,5 @@ button.active div {
     background: #333;
     color: #fff;
     border: none;
+
 }
