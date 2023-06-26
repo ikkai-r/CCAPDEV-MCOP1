@@ -601,6 +601,7 @@ button.active div {
 /* View Post */
 .viewed-post{
     width: 270vh;
+    height: fit-content;
     
     background-color: #FFFFFF;
     
