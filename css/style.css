@@ -409,6 +409,10 @@ button.active div {
     padding-bottom: 0.3vh;
 }
 
+.comments-cont:hover {
+    cursor: pointer;
+}
+
 .votes-cont, .share-cont {
     margin-right: 1vh;
 }
@@ -666,7 +670,7 @@ button.active div {
     height: 10vh;
 }
 
-.all-comment:not(:first-child){
+.all-comment>.all-comment{
     margin-left:4vh;
 }
 
