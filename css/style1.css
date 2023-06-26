@@ -591,6 +591,10 @@ button.active div {
     width: 30%
 }
 
+.postcom-tags {
+    text-decoration: none;
+}
+
 a {
     color: inherit;
 }
