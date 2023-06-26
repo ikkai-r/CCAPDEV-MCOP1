@@ -13,12 +13,23 @@ document.getElementById("add-tag-area").addEventListener("keydown", function(e) 
   });
   
 function createNewDiv(text) {
-    var newDiv = document.createElement("div");
-    newDiv.textContent = text;
-    newDiv.className = "postcom-tags post-tags-cont mt-2 added-tag";
-    document.getElementById("tag-grp").appendChild(newDiv);
+  var outerDiv = document.createElement("div");
+  outerDiv.className = "post-tags-cont-r mt-2 added-tag";
+
+  var icon = document.createElement("i");
+  icon.className = "fa-solid fa-xmark postcom-tags";
+  icon.style.marginRight = "5px";
+
+  var span = document.createElement("span");
+  span.contentEditable = true;
+  span.textContent = text;
+
+  outerDiv.appendChild(icon);
+  outerDiv.appendChild(span);
+
+  document.getElementById("tag-grp").appendChild(outerDiv);
 }
 
 $(document).on("click", ".fa-xmark", function () {
-  $(this).closest("div").find(".added-tag").css("background-color", "red");
-}); 
+  $(this).parent().remove();
+});
