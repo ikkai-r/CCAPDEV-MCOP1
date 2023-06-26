@@ -666,7 +666,7 @@ button.active div {
     height: 10vh;
 }
 
-.all-comment:not(:first-child){
+.all-comment>.all-comment{
     margin-left:4vh;
 }
 

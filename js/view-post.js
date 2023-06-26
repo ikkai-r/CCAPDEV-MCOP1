@@ -114,6 +114,7 @@ function addReply(text) {
 }
 
 
+
 function onClickRep(e) {
     let closest = e.target.closest(".all-comment");
     
@@ -149,15 +150,20 @@ function copyComment(text){
 }
 
 $(".comment-container").click(function (e) {
-
     let closest = e.target.closest(".all-comment");
+    console.log(closest);
 
     $(".submit-comment").unbind().click(function () {
         const commentTextarea = $(".comment-textarea");
         if (commentTextarea.val) {
 
             if(commentTextarea.val() !== "") {
-                closest.appendChild(addReply(commentTextarea.val()));
+                if(closest != null){
+                    closest.appendChild(addReply(commentTextarea.val()));
+                } else {
+                    const commentContainer = document.querySelector(".comment-container");
+                    commentContainer.appendChild(addReply(commentTextarea.val()));
+                }
                 $(".commenting").remove();
             } else {
                 const commentTextarea = $(".commenting");
@@ -268,6 +274,18 @@ $(document).on("click", ".comment-proper-votes", function () {
         }
     } 
 
+});
+
+$(document).on("click", ".comments-cont", function (e){
+    let commentContainer = document.querySelector(".comment-container");
+
+    if (isCommenting == 0){
+        commentContainer.appendChild(createTextarea ());
+        element = document.getElementById("comment-cancel");
+        isCommenting = 1;
+        element.addEventListener("click", onClickCancel);
+    }
+    
 });
 
 function onClickEdit(e){
