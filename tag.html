@@ -38,8 +38,8 @@
         <div class="collapse navbar-collapse d-flex  justify-content-end" id="navbarSupportedContent">
             <ul class="navbar-nav mb-auto mb-2 mb-lg-0 align-items-center">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#"><i class="nav-icons fa-solid fa-magnifying-glass" data-bs-toggle="modal" data-bs-target="#searchModal"></i></a>
-                  </li>
+                    <a class="nav-link active" aria-current="page" href="#"><i class="nav-icons fa-solid fa-magnifying-glass"></i></a>
+                </li>
                 <li class="nav-item">
                 <a class="nav-link" aria-current="page" href="view-tags.html"><i class="nav-icons fa-solid fa-hashtag"></i></a>
                 </li>
@@ -155,15 +155,16 @@
         <div class="tag-group-row">
             <!-- 1st Post -->
             <div class="tag-group mr-2 col-md-3">
-                <!-- left bar that cointains upvote, downvote, comment and share buttons -->
+                <!-- left bar that cointains upvote, downvote, and share buttons -->
                 <div class="tag-post-left-bar">
+                    <!-- Votes -->
                     <div class="left-bar-header"> 
-                        <i class="fa fa-regular fa-circle-up add-tag" id="upvote-btn"></i>
+                        <i class="fa fa-regular fa-circle-up add-tag"></i>
                         <span id="vote-ctr" style="font-size:smaller; margin-right: 5vh;"><b>100</b></span>
-                        <i class="fa fa-regular fa-circle-down add-tag" oneclick="downvote(this)"></i>
-                    
+                        <i class="fa fa-regular fa-circle-down add-tag"></i>
                     </div>
 
+                    <!-- Share -->
                     <div class="left-bar-footer">
                         <i class="fa fa-regular fa-share-from-square" onclick="copyLink('view-post.html')"></i>
                     </div>
@@ -177,7 +178,7 @@
                         <div class="tag-profile">
                             <img src="img/profile-pic.png" class="profile-pic">
                         </div>
-                        <span class="tag-title"><b>undertale sans is so cool</b></span>   
+                        <h7 class="tag-title"><b>undertale sans is so cool</b></h7>   
                     </div>
                     <span class="post-info">posted by <a href="sansfangirlxoxo.html">sansfangirlxoxo</a> on May 1, 2023</span>                    
                     
@@ -192,14 +193,14 @@
                     <!-- footer of the tag that contains the taglist -->
                     <div class="right-bar-footer">
                         <div class="d-flex">
-                            <a href="#" class="postcom-tags post-tags-cont">#sans</a>
-                            <a href="#" class="postcom-tags post-tags-cont">#lorem</a>
-                            <a href="#" class="postcom-tags post-tags-cont">#ipsum</a>
-                            <a href="#" class="postcom-tags post-tags-cont">#mybrainisdying</a>
-                            <a href="#" class="postcom-tags post-tags-cont">#brainrot</a>
-                            <a href="#" class="postcom-tags post-tags-cont">#undertale</a>
-                            <a href="#" class="postcom-tags post-tags-cont">#sansismyboyfriend</a>
-                            <a href="#" class="postcom-tags post-tags-cont">#donttouchhim</a>
+                            <span class="macro-tags-cont">#sans</span>
+                            <span class="macro-tags-cont">#lorem</span>
+                            <span class="macro-tags-cont">#ipsum</span>
+                            <span class="macro-tags-cont">#mybrainisdying</span>
+                            <span class="macro-tags-cont">#brainrot</span>
+                            <span class="macro-tags-cont">#undertale</span>
+                            <span class="macro-tags-cont">#sansismyboyfriend</span>
+                            <span class="macro-tags-cont">#donttouchhim</span>
                         </div>
                     </div>
                 </div>
@@ -228,8 +229,6 @@
             }
         }
     </script>
-    
-    <!-- -->
     <script type="text/javascript" src="js/staple.js"></script>
 
 </body>

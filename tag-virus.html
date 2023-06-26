@@ -38,8 +38,8 @@
         <div class="collapse navbar-collapse d-flex  justify-content-end" id="navbarSupportedContent">
             <ul class="navbar-nav mb-auto mb-2 mb-lg-0 align-items-center">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#"><i class="nav-icons fa-solid fa-magnifying-glass" data-bs-toggle="modal" data-bs-target="#searchModal"></i></a>
-                  </li>
+                    <a class="nav-link active" aria-current="page" href="#"><i class="nav-icons fa-solid fa-magnifying-glass"></i></a>
+                </li>
                 <li class="nav-item">
                 <a class="nav-link" aria-current="page" href="view-tags.html"><i class="nav-icons fa-solid fa-hashtag"></i></a>
                 </li>
@@ -63,6 +63,20 @@
                                 <button type="submit" class="search-confirm"><i class="nav-icons fa-solid fa-magnifying-glass"></i></button>
                             </div>
                         </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Link Copy Modal -->
+    <div class="modal fade" id="copyLinkModal" tabindex="-1" aria-labelledby="copyLinkModal" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" style="width: 40vh;">
+            <div class="container">
+                <div class="modal-content logreg-modal" style="display: flex; align-items: center; text-align: center;">
+                    <div class="modal-body">
+                        <h1 class="logging-out" style="font-family: 'Shrikhand', cursive; font-size: x-large;">link copied successfully</h1>
+                        <h4 class="mt-3">share it with anyone!</h4>
                     </div>
                 </div>
             </div>
@@ -143,14 +157,16 @@
             <div class="tag-group mr-2 col-md-3">
                 <!-- left bar that cointains upvote, downvote, comment and share buttons -->
                 <div class="tag-post-left-bar">
+                    <!-- Votes -->
                     <div class="left-bar-header"> 
-                        <i class="fa fa-regular fa-circle-up" oneclick="upvote(this)"></i>
+                        <i class="fa fa-regular fa-circle-up add-tag"></i>
                         <span id="vote-ctr" style="font-size:smaller; margin-right: 5vh;"><b>100</b></span>
-                        <i class="fa fa-regular fa-circle-down fa-xl" oneclick="downvote(this)"></i>
+                        <i class="fa fa-regular fa-circle-down add-tag"></i>
                     </div>
 
+                    <!-- Share -->
                     <div class="left-bar-footer">
-                        <i class="fa fa-regular fa-share-from-square fa-xl"></i>
+                        <i class="fa fa-regular fa-share-from-square" onclick="copyLink('view-post.html')"></i>
                     </div>
                 </div>
 
@@ -188,8 +204,9 @@
     </div> <!-- End of Tags Page -->
 
 
-    
 
+    <!-- JQuery JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
     <!-- Fontawesome JS -->
@@ -205,6 +222,7 @@
             }
         }
     </script>
+    <script type="text/javascript" src="js/staple.js"></script>
 
 </body>
 
