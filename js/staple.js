@@ -1,5 +1,4 @@
 $(".add-tag").click(function () {
-
     if($(this).hasClass('fa-circle-plus')) {
         $(this).removeClass('fa-circle-plus');
         $(this).addClass('fa-circle-minus');
@@ -8,7 +7,7 @@ $(".add-tag").click(function () {
         $(this).addClass('fa-circle-plus');
     }
     
-})
+});
 
 function copyLink(url) {
     navigator.clipboard.writeText(url);
