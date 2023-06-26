@@ -37,7 +37,7 @@
           <div class="collapse navbar-collapse d-flex  justify-content-end" id="navbarSupportedContent">
             <ul class="navbar-nav mb-auto mb-2 mb-lg-0 align-items-center">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#"><i class="nav-icons fa-solid fa-magnifying-glass"></i></a>
+                    <a class="nav-link active" aria-current="page" href="#"><i class="nav-icons fa-solid fa-magnifying-glass" data-bs-toggle="modal" data-bs-target="#searchModal"></i></a>
                   </li>
                 <li class="nav-item">
                   <a class="nav-link" aria-current="page" href="view-tags.html"><i class="nav-icons fa-solid fa-hashtag"></i></a>
@@ -55,6 +55,38 @@
             </div>
         </div>
       </nav>
+
+    <!-- Search Modal -->
+    <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModal" aria-hidden="true" style="width: 100%;">
+        <div class="modal-dialog">
+            <div class="container">
+                <div class="modal-content search-modal">
+                    <div class="modal-body search-modal-body">
+                        <form>
+                            <div class="d-flex justify-content-between">
+                                <input class="search-input"type="text" aria-placeholder="Search..." placeholder="Search...">
+                                <button type="submit" class="search-confirm"><i class="nav-icons fa-solid fa-magnifying-glass"></i></button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Link Copy Modal -->
+    <div class="modal fade" id="copyLinkModal" tabindex="-1" aria-labelledby="copyLinkModal" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" style="width: 40vh;">
+            <div class="container">
+                <div class="modal-content logreg-modal" style="display: flex; align-items: center; text-align: center;">
+                    <div class="modal-body">
+                        <h1 class="logging-out">link copied successfully</h1>
+                        <h4 class="mt-3">share it with anyone!</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Login Modal -->
     <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModal" aria-hidden="true">
@@ -124,31 +156,105 @@
                     <h2>Get Coconut'd</h2>
                     <p class="post-creator-posted-by">posted by <a href="deeznuts.html">DeezNuts</a> on May 10, 2023</p>
                     <p>
-                        (Copy paste the lyrics of the Da Coconut Nut)
+                        Da Coconut Nut <br>
+                        Song by Smokey Mountain
+                        <br><br>
+
+                        The coconut nut is a giant nut <br>
+                        If you eat too much, you'll get very fat <br>
+                        Now, the coconut nut is a big, big nut <br>
+                        But this delicious nut is not a nut <br>
+                        <br>
+
+                        It's the coco fruit (it's the coco fruit) <br>
+                        Of the coco tree (of the coco tree) <br>
+                        From the coco palm family <br>
+                        <br>
+
+                        There are so many uses of the coconut tree <br>
+                        You can build a big house for the family <br>
+                        All you need is to find a coconut man <br>
+                        If he cuts the tree, he gets the fruit free <br>
+                        <br>
+
+                        It's the coco fruit (it's the coco fruit) <br>
+                        Of the coco tree (of the coco tree) <br>
+                        From the coco palm family <br>
+                        <br>
+
+                        The coconut bark for the kitchen floor <br>
+                        If you save some of it, you can build a door <br>
+                        Now, the coconut trunk, do not throw this junk <br>
+                        If you save some of it, you'll have a second floor <br>
+                        <br>
+
+                        The coconut wood is very good <br>
+                        It can stand 20 years if you pray it would <br>
+                        Now, the coconut root, to tell you the truth <br>
+                        You can throw it or use it as firewood <br>
+                        <br>
+
+                        The coconut leaves, good shade it gives <br>
+                        For the roof, for the walls up against the eaves <br>
+                        Now, the coconut fruit, say my relatives <br>
+                        Make good cannonballs up against the thieves <br>
+                        <br>
+
+                        It's the coco fruit (it's the coco fruit) <br>
+                        Of the coco tree (of the coco tree) <br>
+                        From the coco palm family <br>
+                        <br>
+
+                        The coconut nut is a giant nut <br>
+                        If you eat too much, you'll get very fat <br>
+                        Now, the coconut nut is a big, big nut <br>
+                        But this delicious nut is not a nut <br>
+                        <br>
+
+                        It's the coco fruit (it's the coco fruit) <br>
+                        Of the coco tree (of the coco tree) <br>
+                        From the coco palm family <br>
+                        <br>
+
+                        It's the coco fruit (it's the coco fruit) <br>
+                        Of the coco tree (of the coco tree) <br>
+                        From the coco palm family <br>
+                        <br>
+
+                        It's the coco fruit (it's the coco fruit) <br>
+                        Of the coco tree (of the coco tree) <br>
+                        From the coco palm family <br>
+                        <br>
+
+                        Olé!
                     </p>
-                    <span class="postcom-tags post-tags-cont">#coconut</span>
-                    <span class="postcom-tags post-tags-cont">#morenuts</span>
-                    <span class="postcom-tags post-tags-cont">#deeznuts</span>
+                    <div class="d-flex">
+                        <a href="view-tags.html" class="postcom-tags post-tags-cont">#coconut</a>
+                        <a href="view-tags.html" class="postcom-tags post-tags-cont">#morenuts</a>
+                        <a href="view-tags.html" class="postcom-tags post-tags-cont">#deeznuts</a>
+                    </div>
+
                     <div class="actions-cont viewed-post-actions mb-3 mt-3">
-                        <div class="share-cont">
+                        <div class="share-cont" id="share-btn" onclick="copyLink('view-post.html')">
                             <i class="fa-regular fa-share-from-square"></i>
                         </div>
                         <div class="votes-cont">
-                            <i class="fa-solid fa-circle-up"></i>
-                            <span style="font-size:smaller; margin-right: 0.5vh;"><b>3</b></span>
+                            <i class="fa-regular fa-circle-up" id="upvote-btn"></i>
+                            <span style="font-size:smaller; margin-right: 0.5vh;" id="upvote-amnt"><b>3</b></span>
                             <span style="font-size:smaller; margin-right: 0.5vh;"><b>|</b></span>
-                            <i class="fa-regular fa-circle-down"></i>
-                            <span style="font-size:smaller"><b>0</b></span>
+                            <i class="fa-regular fa-circle-down" id="downvote-btn"></i>
+                            <span style="font-size:smaller" id="downvote-amnt"><b>0</b></span>
                         </div>
                         <div class="comments-cont">
                             <i class="fa-regular fa-comment-dots"></i>
-                            <span style="font-size:smaller"><b>0</b></span>
+                            <span style="font-size:smaller" id="comment-amnt"><b>0</b></span>
                         </div>
                     </div>
                 </div>
                 
-                
-                <h3>Comments (0)</h3>
+
+                <h3>Comments (<span id="comment-bar-amnt">0</span>)</h3>
+                <!-- Comment portion -->
                
                 
             </div>
@@ -156,42 +262,42 @@
             <!-- Side Container -->
             <div class="container-sm">
 
-                <!-- Popular Tags -->
-                <div class="container side-cont pt-4">
-                    <h5 class="side-text">popular tags</h5>
-                    <div class="line"></div>
+               <!-- Popular Tags -->
+               <div class="container side-cont pt-4">
+                <a href="view-tags.html" class="side-text"><h5 class="side-txt">popular tags</h5></a>
+                <div class="line"></div>
 
-                    <div class="container d-flex mt-2 justify-content-between">
-                        <h6 class="pop-tag">#sans (2000)</h6>
-                        <i class="fa-solid fa-circle-plus add-tag"></i>
-                    </div>
-
-                    <div class="container d-flex mt-2 justify-content-between">
-                        <h6 class="pop-tag">#news (1042)</h6>
-                        <i class="fa-solid fa-circle-plus add-tag"></i>
-                    </div>
-
-                    <div class="container d-flex mt-2 justify-content-between">
-                        <h6 class="pop-tag">#gaming (510)</h6>
-                        <i class="fa-solid fa-circle-plus add-tag"></i>
-                    </div>
-
-                    <div class="container d-flex mt-2 justify-content-between">
-                        <h6 class="pop-tag">#hash (420)</h6>
-                        <i class="fa-solid fa-circle-plus add-tag"></i>
-                    </div>
-
-                    <div class="container d-flex mt-2 justify-content-between">
-                        <h6 class="pop-tag">#wow (312)</h6>
-                        <i class="fa-solid fa-circle-plus add-tag"></i>
-                    </div>
-
-                    <div class="container d-flex mt-2 justify-content-between">
-                        <h6 class="pop-tag">#corruption (231)</h6>
-                        <i class="fa-solid fa-circle-plus add-tag"></i>
-                    </div>
-
+                <div class="container d-flex mt-2 justify-content-between">
+                    <a href="tag.html" class="pop-tag" style="text-decoration: none;"><h6 class="pop-tag">#sans (2000)</h6></a>
+                    <i class="fa-solid fa-circle-plus add-tag"></i>
                 </div>
+
+                <div class="container d-flex mt-2 justify-content-between">
+                    <a href="tag.html" class="pop-tag" style="text-decoration: none;"><h6 class="pop-tag">#news (1042)</h6></a>
+                    <i class="fa-solid fa-circle-plus add-tag"></i>
+                </div>
+
+                <div class="container d-flex mt-2 justify-content-between">
+                    <a href="tag.html" class="pop-tag" style="text-decoration: none;"><h6 class="pop-tag">#gaming (510)</h6></a>
+                    <i class="fa-solid fa-circle-plus add-tag"></i>
+                </div>
+
+                <div class="container d-flex mt-2 justify-content-between">
+                    <a href="tag.html" class="pop-tag" style="text-decoration: none;"><h6 class="pop-tag">#hash (420)</h6></a>
+                    <i class="fa-solid fa-circle-plus add-tag"></i>
+                </div>
+
+                <div class="container d-flex mt-2 justify-content-between">
+                    <a href="tag.html" class="pop-tag" style="text-decoration: none;"><h6 class="pop-tag">#wow (312)</h6></a>
+                    <i class="fa-solid fa-circle-plus add-tag"></i>
+                </div>
+
+                <div class="container d-flex mt-2 justify-content-between">
+                    <a href="tag.html" class="pop-tag" style="text-decoration: none;"><h6 class="pop-tag">#corruption (231)</h6></a>
+                    <i class="fa-solid fa-circle-plus add-tag"></i>
+                </div>
+
+            </div>
 
                 <!-- Latest Posts -->
                 <div class="container side-cont mt-4 pt-4">

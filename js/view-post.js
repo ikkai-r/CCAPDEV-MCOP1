@@ -31,24 +31,6 @@ function createTextarea () {
     return div;
 }
 
-function convertDateToTxt() {
-    const date = new Date();
-    const monthNames = [
-        "January", "February", "March", "April", "May", "June", 
-        "July", "August", "September", "October", "November", "December"
-      ];
-    
-    let day = date.getDate();
-    let month = date.getMonth();
-    let year = date.getFullYear();
-
-    // Format the date
-    let formattedDate = monthNames[month] + " " + day + ", " + year;
-    
-    return formattedDate;
-          
-}
-
 function addReply(text) {
     let div = document.createElement("div");
     div.setAttribute("class", "all-comment");

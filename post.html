@@ -38,7 +38,7 @@
           <div class="collapse navbar-collapse d-flex  justify-content-end" id="navbarSupportedContent">
             <ul class="navbar-nav mb-auto mb-2 mb-lg-0 align-items-center">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#"><i class="nav-icons fa-solid fa-magnifying-glass"></i></a>
+                    <a class="nav-link active" aria-current="page" href="#"><i class="nav-icons fa-solid fa-magnifying-glass" data-bs-toggle="modal" data-bs-target="#searchModal"></i></a>
                   </li>
                 <li class="nav-item">
                   <a class="nav-link" aria-current="page" href="view-tags.html"><i class="nav-icons fa-solid fa-hashtag"></i></a>
@@ -56,6 +56,24 @@
             </div>
         </div>
       </nav>
+
+      <!-- Search Modal -->
+    <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModal" aria-hidden="true" style="width: 100%;">
+        <div class="modal-dialog">
+            <div class="container">
+                <div class="modal-content search-modal">
+                    <div class="modal-body search-modal-body">
+                        <form>
+                            <div class="d-flex justify-content-between">
+                                <input class="search-input"type="text" aria-placeholder="Search..." placeholder="Search...">
+                                <button type="submit" class="search-confirm"><i class="nav-icons fa-solid fa-magnifying-glass"></i></button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Login Modal -->
     <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModal" aria-hidden="true">
@@ -117,12 +135,13 @@
         <div class="container d-flex content-container mt-4">
             <!-- All Posts Container -->
             <div class="post-creator">
-                <div class="post-creator-delete"><i class="fa-regular fa-trash-can"></i></div>
+                <div class="post-creator-delete"><a href="index.html"><i class="fa-regular fa-trash-can"></i></a></div>
                 <textarea class="post-creator-title" rows="1" placeholder="type your title here"></textarea>
-                <p class="post-creator-posted-by">posted by thetotallyrealjack on May 23, 2023</p>
+                <p class="post-creator-posted-by">posted by helpvirus on <span id="date"></span></p>
                 <div class="textarea post-creator-description" contenteditable="true" placeholder="Enter your description here" oninput="if(this.innerHTML.trim()==='<br>')this.innerHTML=''"></div>
-                <div class="post-creator-add-tag" contenteditable="true" placeholder="#add your tags here" oninput="if(this.innerHTML.trim()==='<br>')this.innerHTML=''"></div>
-                <div class="post-creator-buttons">
+                <div id="add-tag-area" class="post-creator-add-tag" contenteditable="true" placeholder="#add your tags here" oninput="if(this.innerHTML.trim()==='<br>')this.innerHTML=''"></div>
+                <div class="d-flex" id="tag-grp"></div>
+                <div class="post-creator-buttons mt-3">
                     <a href="index.html">
                         <button class="pill post-creator-cancel">cancel</button>
                     </a>
@@ -136,39 +155,39 @@
 
                 <!-- Popular Tags -->
                 <div class="container side-cont pt-4">
-                    <h5 class="side-text">popular tags</h5>
+                    <a href="view-tags.html" class="side-text"><h5 class="side-txt">popular tags</h5></a>
                     <div class="line"></div>
-        
+
                     <div class="container d-flex mt-2 justify-content-between">
-                        <h6 class="pop-tag">#sans (2000)</h6>
+                        <a href="tag.html" class="pop-tag" style="text-decoration: none;"><h6 class="pop-tag">#sans (2000)</h6></a>
                         <i class="fa-solid fa-circle-plus add-tag"></i>
                     </div>
-        
+
                     <div class="container d-flex mt-2 justify-content-between">
-                        <h6 class="pop-tag">#news (1042)</h6>
+                        <a href="tag.html" class="pop-tag" style="text-decoration: none;"><h6 class="pop-tag">#news (1042)</h6></a>
                         <i class="fa-solid fa-circle-plus add-tag"></i>
                     </div>
-        
+
                     <div class="container d-flex mt-2 justify-content-between">
-                        <h6 class="pop-tag">#gaming (510)</h6>
+                        <a href="tag.html" class="pop-tag" style="text-decoration: none;"><h6 class="pop-tag">#gaming (510)</h6></a>
                         <i class="fa-solid fa-circle-plus add-tag"></i>
                     </div>
-        
+
                     <div class="container d-flex mt-2 justify-content-between">
-                        <h6 class="pop-tag">#hash (420)</h6>
+                        <a href="tag.html" class="pop-tag" style="text-decoration: none;"><h6 class="pop-tag">#hash (420)</h6></a>
                         <i class="fa-solid fa-circle-plus add-tag"></i>
                     </div>
-        
+
                     <div class="container d-flex mt-2 justify-content-between">
-                        <h6 class="pop-tag">#wow (312)</h6>
+                        <a href="tag.html" class="pop-tag" style="text-decoration: none;"><h6 class="pop-tag">#wow (312)</h6></a>
                         <i class="fa-solid fa-circle-plus add-tag"></i>
                     </div>
-        
+
                     <div class="container d-flex mt-2 justify-content-between">
-                        <h6 class="pop-tag">#corruption (231)</h6>
+                        <a href="tag.html" class="pop-tag" style="text-decoration: none;"><h6 class="pop-tag">#corruption (231)</h6></a>
                         <i class="fa-solid fa-circle-plus add-tag"></i>
                     </div>
-        
+
                 </div>
         
                 <!-- Latest Posts -->
@@ -234,7 +253,6 @@
                     </div>
                 </div>
                 </div>
-        
             </div>
         </div>
     
@@ -247,5 +265,6 @@
     <!-- Fontawesome JS -->
     <script src="https://kit.fontawesome.com/8fc6c81a17.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="js/staple.js"></script>
+    <script type="text/javascript" src="js/post.js"></script>
 </body>
 

@@ -37,7 +37,7 @@
           <div class="collapse navbar-collapse d-flex  justify-content-end" id="navbarSupportedContent">
             <ul class="navbar-nav mb-auto mb-2 mb-lg-0 align-items-center">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#"><i class="nav-icons fa-solid fa-magnifying-glass"></i></a>
+                    <a class="nav-link active" aria-current="page" href="#"><i class="nav-icons fa-solid fa-magnifying-glass" data-bs-toggle="modal" data-bs-target="#searchModal"></i></a>
                   </li>
                 <li class="nav-item">
                   <a class="nav-link" aria-current="page" href="view-tags.html"><i class="nav-icons fa-solid fa-hashtag"></i></a>
@@ -55,6 +55,24 @@
             </div>
         </div>
       </nav>
+
+    <!-- Search Modal -->
+    <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModal" aria-hidden="true" style="width: 100%;">
+        <div class="modal-dialog">
+            <div class="container">
+                <div class="modal-content search-modal">
+                    <div class="modal-body search-modal-body">
+                        <form>
+                            <div class="d-flex justify-content-between">
+                                <input class="search-input"type="text" aria-placeholder="Search..." placeholder="Search...">
+                                <button type="submit" class="search-confirm"><i class="nav-icons fa-solid fa-magnifying-glass"></i></button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Link Copy Modal -->
     <div class="modal fade" id="copyLinkModal" tabindex="-1" aria-labelledby="copyLinkModal" aria-hidden="true">
@@ -148,14 +166,14 @@
                         <img src="img/sans.png" class="viewed-post-img">
                     </div>
                         <div class="d-flex">
-                            <a href="#" class="postcom-tags post-tags-cont">#sans</a>
-                            <a href="#" class="postcom-tags post-tags-cont">#lorem</a>
-                             <a href="#" class="postcom-tags post-tags-cont">#ipsum</a>
-                             <a href="#" class="postcom-tags post-tags-cont">#mybrainisdying</a>
-                             <a href="#" class="postcom-tags post-tags-cont">#brainrot</a>
-                             <a href="#" class="postcom-tags post-tags-cont">#undertale</a>
-                             <a href="#" class="postcom-tags post-tags-cont">#sansismyboyfriend</a>
-                             <a href="#" class="postcom-tags post-tags-cont">#donttouchhim</a>
+                            <a href="tag.html" class="postcom-tags post-tags-cont">#sans</a>
+                            <a href="tag-lorem.html" class="postcom-tags post-tags-cont">#lorem</a>
+                             <a href="tag-ipsum.html" class="postcom-tags post-tags-cont">#ipsum</a>
+                             <a href="tag-mybrainisdying.html" class="postcom-tags post-tags-cont">#mybrainisdying</a>
+                             <a href="tag-brainrot.html" class="postcom-tags post-tags-cont">#brainrot</a>
+                             <a href="tag-undertale.html" class="postcom-tags post-tags-cont">#undertale</a>
+                             <a href="tag-sansismyboyfriend.html" class="postcom-tags post-tags-cont">#sansismyboyfriend</a>
+                             <a href="tag-donttouchhim.html" class="postcom-tags post-tags-cont">#donttouchhim</a>
                          </div>
                     <div class="actions-cont viewed-post-actions mb-3 mt-3">
                         <div class="share-cont" id="share-btn" onclick="copyLink('view-post.html')">
@@ -216,36 +234,36 @@
 
                 <!-- Popular Tags -->
                 <div class="container side-cont pt-4">
-                    <h5 class="side-text">popular tags</h5>
+                    <a href="view-tags.html" class="side-text"><h5 class="side-txt">popular tags</h5></a>
                     <div class="line"></div>
 
                     <div class="container d-flex mt-2 justify-content-between">
-                        <h6 class="pop-tag">#sans (2000)</h6>
+                        <a href="tag.html" class="pop-tag" style="text-decoration: none;"><h6 class="pop-tag">#sans (2000)</h6></a>
                         <i class="fa-solid fa-circle-plus add-tag"></i>
                     </div>
 
                     <div class="container d-flex mt-2 justify-content-between">
-                        <h6 class="pop-tag">#news (1042)</h6>
+                        <a href="tag.html" class="pop-tag" style="text-decoration: none;"><h6 class="pop-tag">#news (1042)</h6></a>
                         <i class="fa-solid fa-circle-plus add-tag"></i>
                     </div>
 
                     <div class="container d-flex mt-2 justify-content-between">
-                        <h6 class="pop-tag">#gaming (510)</h6>
+                        <a href="tag.html" class="pop-tag" style="text-decoration: none;"><h6 class="pop-tag">#gaming (510)</h6></a>
                         <i class="fa-solid fa-circle-plus add-tag"></i>
                     </div>
 
                     <div class="container d-flex mt-2 justify-content-between">
-                        <h6 class="pop-tag">#hash (420)</h6>
+                        <a href="tag.html" class="pop-tag" style="text-decoration: none;"><h6 class="pop-tag">#hash (420)</h6></a>
                         <i class="fa-solid fa-circle-plus add-tag"></i>
                     </div>
 
                     <div class="container d-flex mt-2 justify-content-between">
-                        <h6 class="pop-tag">#wow (312)</h6>
+                        <a href="tag.html" class="pop-tag" style="text-decoration: none;"><h6 class="pop-tag">#wow (312)</h6></a>
                         <i class="fa-solid fa-circle-plus add-tag"></i>
                     </div>
 
                     <div class="container d-flex mt-2 justify-content-between">
-                        <h6 class="pop-tag">#corruption (231)</h6>
+                        <a href="tag.html" class="pop-tag" style="text-decoration: none;"><h6 class="pop-tag">#corruption (231)</h6></a>
                         <i class="fa-solid fa-circle-plus add-tag"></i>
                     </div>
 

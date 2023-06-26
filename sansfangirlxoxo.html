@@ -37,7 +37,7 @@
           <div class="collapse navbar-collapse d-flex  justify-content-end" id="navbarSupportedContent">
             <ul class="navbar-nav mb-auto mb-2 mb-lg-0 align-items-center">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#"><i class="nav-icons fa-solid fa-magnifying-glass"></i></a>
+                    <a class="nav-link active" aria-current="page" href="#"><i class="nav-icons fa-solid fa-magnifying-glass" data-bs-toggle="modal" data-bs-target="#searchModal"></i></a>
                   </li>
                 <li class="nav-item">
                   <a class="nav-link" aria-current="page" href="view-tags.html"><i class="nav-icons fa-solid fa-hashtag"></i></a>
@@ -104,6 +104,24 @@
                           </form>
                     </div>
                         <button type="button" class="btn btn-loginreg" style="margin-right: 2vh; margin-left: 2vh; margin-top: -1vh;">register</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Search Modal -->
+    <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModal" aria-hidden="true" style="width: 100%;">
+        <div class="modal-dialog">
+            <div class="container">
+                <div class="modal-content search-modal">
+                    <div class="modal-body search-modal-body">
+                        <form>
+                            <div class="d-flex justify-content-between">
+                                <input class="search-input"type="text" aria-placeholder="Search..." placeholder="Search...">
+                                <button type="submit" class="search-confirm"><i class="nav-icons fa-solid fa-magnifying-glass"></i></button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
@@ -246,12 +264,12 @@
                         <div class="container">
                             <div class="row" style="display: flex; justify-content: center;">
                                 <div class="tag-group col-md-3" style="margin-right: 5vh;">
-                                    <div><h6 class="tag-group-name">#sans</h4></div>
+                                    <div><h6 class="tag-group-name"><a href="tags.html">#sans</a></h4></div>
                                     <div class="tag-group-img" style="background-image:url(img/sans.png);"></div>
                                     <div><h6 class="tag-group-count">1.3k posts</h4></div>
                                 </div>
                                 <div class="tag-group mr-5 col-md-3" style="margin-right: 5vh;">
-                                    <div><h6 class="tag-group-name">#sansfanart</h4></div>
+                                    <div><h6 class="tag-group-name"><a href="view-tags.html">#sansfanart</a></h4></div>
                                     <div class="tag-group-img" style="background-image:url(img/sansfangirlxoxo.png);"></div>
                                     <div><h6 class="tag-group-count">972 posts</h4></div>
                                 </div>
@@ -266,42 +284,42 @@
             <!-- Side Container -->
             <div class="container-sm">
 
-                <!-- Popular Tags -->
-                <div class="container side-cont pt-4">
-                    <h5 class="side-text">popular tags</h5>
-                    <div class="line"></div>
+               <!-- Popular Tags -->
+               <div class="container side-cont pt-4">
+                <a href="view-tags.html" class="side-text"><h5 class="side-txt">popular tags</h5></a>
+                <div class="line"></div>
 
-                    <div class="container d-flex mt-2 justify-content-between">
-                        <h6 class="pop-tag">#sans (2000)</h6>
-                        <i class="fa-solid fa-circle-plus add-tag"></i>
-                    </div>
-
-                    <div class="container d-flex mt-2 justify-content-between">
-                        <h6 class="pop-tag">#news (1042)</h6>
-                        <i class="fa-solid fa-circle-plus add-tag"></i>
-                    </div>
-
-                    <div class="container d-flex mt-2 justify-content-between">
-                        <h6 class="pop-tag">#gaming (510)</h6>
-                        <i class="fa-solid fa-circle-plus add-tag"></i>
-                    </div>
-
-                    <div class="container d-flex mt-2 justify-content-between">
-                        <h6 class="pop-tag">#hash (420)</h6>
-                        <i class="fa-solid fa-circle-plus add-tag"></i>
-                    </div>
-
-                    <div class="container d-flex mt-2 justify-content-between">
-                        <h6 class="pop-tag">#wow (312)</h6>
-                        <i class="fa-solid fa-circle-plus add-tag"></i>
-                    </div>
-
-                    <div class="container d-flex mt-2 justify-content-between">
-                        <h6 class="pop-tag">#corruption (231)</h6>
-                        <i class="fa-solid fa-circle-plus add-tag"></i>
-                    </div>
-
+                <div class="container d-flex mt-2 justify-content-between">
+                    <a href="tag.html" class="pop-tag" style="text-decoration: none;"><h6 class="pop-tag">#sans (2000)</h6></a>
+                    <i class="fa-solid fa-circle-plus add-tag"></i>
                 </div>
+
+                <div class="container d-flex mt-2 justify-content-between">
+                    <a href="tag.html" class="pop-tag" style="text-decoration: none;"><h6 class="pop-tag">#news (1042)</h6></a>
+                    <i class="fa-solid fa-circle-plus add-tag"></i>
+                </div>
+
+                <div class="container d-flex mt-2 justify-content-between">
+                    <a href="tag.html" class="pop-tag" style="text-decoration: none;"><h6 class="pop-tag">#gaming (510)</h6></a>
+                    <i class="fa-solid fa-circle-plus add-tag"></i>
+                </div>
+
+                <div class="container d-flex mt-2 justify-content-between">
+                    <a href="tag.html" class="pop-tag" style="text-decoration: none;"><h6 class="pop-tag">#hash (420)</h6></a>
+                    <i class="fa-solid fa-circle-plus add-tag"></i>
+                </div>
+
+                <div class="container d-flex mt-2 justify-content-between">
+                    <a href="tag.html" class="pop-tag" style="text-decoration: none;"><h6 class="pop-tag">#wow (312)</h6></a>
+                    <i class="fa-solid fa-circle-plus add-tag"></i>
+                </div>
+
+                <div class="container d-flex mt-2 justify-content-between">
+                    <a href="tag.html" class="pop-tag" style="text-decoration: none;"><h6 class="pop-tag">#corruption (231)</h6></a>
+                    <i class="fa-solid fa-circle-plus add-tag"></i>
+                </div>
+
+            </div>
 
                  <!-- Latest Posts -->
                  <div class="container side-cont mt-4 pt-4">

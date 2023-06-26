@@ -52,8 +52,8 @@
 
 
     <!-- Search Modal -->
-    <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModal" aria-hidden="true">
-        <div class="modal-dialog" style="width: 40vh;">
+    <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModal" aria-hidden="true" style="width: 100%;">
+        <div class="modal-dialog">
             <div class="container">
                 <div class="modal-content search-modal">
                     <div class="modal-body search-modal-body">
@@ -68,7 +68,22 @@
             </div>
         </div>
     </div>
-      <!-- Login Modal -->
+
+    <!-- Link Copy Modal -->
+    <div class="modal fade" id="copyLinkModal" tabindex="-1" aria-labelledby="copyLinkModal" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" style="width: 40vh;">
+            <div class="container">
+                <div class="modal-content logreg-modal" style="display: flex; align-items: center; text-align: center;">
+                    <div class="modal-body">
+                        <h1 class="logging-out">link copied successfully</h1>
+                        <h4 class="mt-3">share it with anyone!</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
     <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModal" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" style="width: 40vh;">
             <div class="container">
@@ -135,24 +150,10 @@
         </div>
     </div>
 
-    <!-- Link Copy Modal -->
-    <div class="modal fade" id="copyLinkModal" tabindex="-1" aria-labelledby="copyLinkModal" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" style="width: 40vh;">
-            <div class="container">
-                <div class="modal-content logreg-modal" style="display: flex; align-items: center; text-align: center;">
-                    <div class="modal-body">
-                        <h1 class="logging-out">link copied successfully</h1>
-                        <h4 class="mt-3">share it with anyone!</h4>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="create-post" data-bs-toggle="modal" data-bs-target="#loginModal">
+    <a href="post.html"><div class="create-post">
         <i class="fa-solid fa-circle-plus create-post-style" style="margin-right: 15px"></i>
         <h4 class="create-post-style mt-2"><b>Post</b></h4>
-    </div>
+    </div></a>
 
       <!-- Content Body -->
       <div class="container mt-4 pt-3">
@@ -163,9 +164,7 @@
             <!-- All Posts Container -->
             <div class="container flex-grow-1 posts">
 
-                <!-- Post Container 
-                
-                -->
+                <!-- Post Container -->
                 <div class="row post"> 
 
                     <!-- Profile Picture -->
@@ -180,10 +179,10 @@
                         <p class="post-content pt-2">omg pls be my boyfriend like look at him, why is he so cool???? i can't exist without him...</p>
                         <div class="d-flex justify-content-between">
                             <div class="d-flex">
-                               <a href="tag.html" class="postcom-tags post-tags-cont">#sans</a>
-                               <a href="tag.html" class="postcom-tags post-tags-cont">#undertale</a>
-                                <a href="tag.html" class="postcom-tags post-tags-cont">#brainrot</a>
-                                <a href="tag.html" class="postcom-tags post-tags-cont">#mybrainisdying</a>
+                                <a href="tag.html" class="postcom-tags post-tags-cont">#sans</a>
+                                <a href="tag-undertale.html" class="postcom-tags post-tags-cont">#undertale</a>
+                                <a href="tag-brainrot.html" class="postcom-tags post-tags-cont">#brainrot</a>
+                                <a href="tag-mybrainisdying.html" class="postcom-tags post-tags-cont">#mybrainisdying</a>
                             </div>
                             <div class="actions-cont d-flex">
                                 <div class="share-cont" onclick="copyLink('view-post.html');">
@@ -203,52 +202,49 @@
                             </div>
                         </div>
                     </div>
-        
-                </div>
+                </div> <!-- End of a post -->
 
                 <!-- Post Container -->
-                    <div class="row post" onclick="redirectToPage('profile_post.html')">
+                <div class="row post">
 
-                        <!-- Profile Picture -->
-                        <div class="col-1">
-                            <img src="img/profile.png" class="profile-pic">
-                        </div>
+                    <!-- Profile Picture -->
+                    <div class="col-1">
+                        <img src="img/profile.png" class="profile-pic">
+                    </div>
     
-                        <!-- Post Proper -->
-                        
-                        <div class="col-11">
-                            <h5 class="post-title"><b><a href="profile_post.html">help my computer is dying</a></b></h5>
-                            <span class="post-info">posted by <a href="profile.html">helpvirus</a> on May 25, 2023</span>
-                            <p class="post-content pt-2">help i think i made a mistake, i downloaded this "free cool toolbar" extension and uploade...</p>
-                            <div class="d-flex justify-content-between">
-                                <div class="d-flex">
-                                    <span class="postcom-tags post-tags-cont">#virus</span>
-                                    <span class="postcom-tags post-tags-cont">#ohgosh</span>
-                                    <span class="postcom-tags post-tags-cont">#aaa</span>
+                    <!-- Post Proper -->
+                    <div class="col-11">
+                        <h5 class="post-title"><b><a href="profile_post.html">help my computer is dying</a></b></h5>
+                        <span class="post-info">posted by <a href="profile.html">helpvirus</a> on May 25, 2023</span>
+                        <p class="post-content pt-2">help i think i made a mistake, i downloaded this "free cool toolbar" extension and uploade...</p>
+                        <div class="d-flex justify-content-between">
+                            <div class="d-flex">
+                                <a href="tag-virus.html" class="postcom-tags post-tags-cont">#virus</a>
+                                <a href="view-tags.html" class="postcom-tags post-tags-cont">#ohgosh</a>
+                                <a href="view-tags.html" class="postcom-tags post-tags-cont">#aaa</a>
+                            </div>
+                            <div class="actions-cont d-flex">
+                                <div class="share-cont" id="share-btn" onclick="copyLink('profile_post.html')">
+                                    <i class="fa-regular fa-share-from-square"></i>
                                 </div>
-                                <div class="actions-cont d-flex">
-                                    <div class="share-cont">
-                                        <i class="fa-regular fa-share-from-square"></i>
-                                    </div>
-                                    <div class="votes-cont">
-                                        <i class="fa-solid fa-circle-up"></i>
-                                        <span style="font-size:smaller; margin-right: 0.5vh;"><b>101</b></span>
-                                        <span style="font-size:smaller; margin-right: 0.5vh;"><b>|</b></span>
-                                        <i class="fa-regular fa-circle-down"></i>
-                                        <span style="font-size:smaller"><b>100</b></span>
-                                    </div>
-                                    <div class="comments-cont">
-                                        <i class="fa-regular fa-comment-dots"></i>
-                                        <span style="font-size:smaller"><b>1</b></span>
-                                    </div>
+                                <div class="votes-cont" data-bs-toggle="modal" data-bs-target="#loginModal">
+                                    <i class="fa-regular fa-circle-up"></i>
+                                    <span style="font-size:smaller; margin-right: 0.5vh;"><b>100</b></span>
+                                    <span style="font-size:smaller; margin-right: 0.5vh;"><b>|</b></span>
+                                    <i class="fa-regular fa-circle-down"></i>
+                                    <span style="font-size:smaller"><b>12</b></span>
+                                </div>
+                                <div class="comments-cont" onclick="redirectToPage('profile_post.html')">
+                                    <i class="fa-regular fa-comment-dots"></i>
+                                    <span style="font-size:smaller" id="comment-amnt"><b>1</b></span>
                                 </div>
                             </div>
                         </div>
-            
-                    </div>    
+                    </div>
+                </div> <!-- End of a post -->
 
                 <!-- Post Container -->
-                <div class="row post" onclick="redirectToPage('sherlockholmes_post.html')">
+                <div class="row post">
 
                     <!-- Profile Picture -->
                     <div class="col-1">
@@ -262,33 +258,32 @@
                         <p class="post-content pt-2">Posting a text.</p>
                         <div class="d-flex justify-content-between">
                             <div class="d-flex">
-                               <span class="postcom-tags post-tags-cont">#minds</span>
-                               <span class="postcom-tags post-tags-cont">#consulting</span>
-                                <span class="postcom-tags post-tags-cont">#detective</span>
+                               <a href="view-tags.html" class="postcom-tags post-tags-cont">#minds</a>
+                               <a href="view-tags.html" class="postcom-tags post-tags-cont">#consulting</a>
+                               <a href="view-tags.html" class="postcom-tags post-tags-cont">#detective</a>
                             </div>
                             <div class="actions-cont d-flex">
-                                <div class="share-cont">
+                                <div class="share-cont" id="share-btn" onclick="copyLink('sherlockholmes_post.html')">
                                     <i class="fa-regular fa-share-from-square"></i>
                                 </div>
-                                <div class="votes-cont">
-                                    <i class="fa-solid fa-circle-up"></i>
+                                <div class="votes-cont" data-bs-toggle="modal" data-bs-target="#loginModal">
+                                    <i class="fa-regular fa-circle-up"></i>
                                     <span style="font-size:smaller; margin-right: 0.5vh;"><b>100</b></span>
                                     <span style="font-size:smaller; margin-right: 0.5vh;"><b>|</b></span>
                                     <i class="fa-regular fa-circle-down"></i>
                                     <span style="font-size:smaller"><b>12</b></span>
                                 </div>
-                                <div class="comments-cont">
+                                <div class="comments-cont" onclick="redirectToPage('sherlockholmes_post.html')">
                                     <i class="fa-regular fa-comment-dots"></i>
-                                    <span style="font-size:smaller"><b>1</b></span>
+                                    <span style="font-size:smaller" id="comment-amnt"><b>1</b></span>
                                 </div>
                             </div>
                         </div>
                     </div>
-        
-                </div>
+                </div> <!-- End of a post -->
 
                 <!-- Post Container -->
-                <div class="row post" onclick="redirectToPage('redqueen_post.html')">
+                <div class="row post">
 
                     <!-- Profile Picture -->
                     <div class="col-1">
@@ -302,34 +297,33 @@
                         <p class="post-content pt-2">OFF WITH YOUR HEAAAAD!!! maaaaaad</p>
                         <div class="d-flex justify-content-between">
                             <div class="d-flex">
-                                <span class="postcom-tags post-tags-cont">#immad</span>
-                                <span class="postcom-tags post-tags-cont">#gonemad</span>
-                                <span class="postcom-tags post-tags-cont">#mad</span>
-                                <span class="postcom-tags post-tags-cont">#maaaaaad</span>
+                                <a href="view-tags.html" class="postcom-tags post-tags-cont">#immad</a>
+                                <a href="view-tags.html" class="postcom-tags post-tags-cont">#gonemad</a>
+                                <a href="view-tags.html" class="postcom-tags post-tags-cont">#mad</a>
+                                <a href="view-tags.html" class="postcom-tags post-tags-cont">#maaaaaad</a>
                              </div>
                             <div class="actions-cont d-flex">
-                                <div class="share-cont">
+                                <div class="share-cont" id="share-btn" onclick="copyLink('predqueen_post.html')">
                                     <i class="fa-regular fa-share-from-square"></i>
                                 </div>
-                                <div class="votes-cont">
-                                    <i class="fa-solid fa-circle-up"></i>
+                                <div class="votes-cont" data-bs-toggle="modal" data-bs-target="#loginModal">
+                                    <i class="fa-regular fa-circle-up"></i>
                                     <span style="font-size:smaller; margin-right: 0.5vh;"><b>3</b></span>
                                     <span style="font-size:smaller; margin-right: 0.5vh;"><b>|</b></span>
                                     <i class="fa-regular fa-circle-down"></i>
                                     <span style="font-size:smaller"><b>45</b></span>
                                 </div>
-                                <div class="comments-cont">
+                                <div class="comments-cont" onclick="redirectToPage('redqueen_post.html')">
                                     <i class="fa-regular fa-comment-dots"></i>
-                                    <span style="font-size:smaller"><b>1</b></span>
+                                    <span style="font-size:smaller" id="comment-amnt"><b>1</b></span>
                                 </div>
                             </div>
                         </div>
                     </div>
-        
-                </div>
+                </div> <!-- End of a post -->
 
                 <!-- Post Container -->
-                <div class="row post" onclick="redirectToPage('deeznuts_post.html')">
+                <div class="row post">
                     <!-- Profile Picture -->
                     <div class="col-1">
                         <img src="img/deeznuts.jpg" class="profile-pic">
@@ -339,36 +333,35 @@
                     <div class="col-11">
                         <h5 class="post-title"><b><a href="deeznuts_post.html">Get Coconut'd</a></b></h5>
                         <span class="post-info">posted by <a href ="deeznuts.html">DeezNuts</a> on May 10, 2023</span>
-                        <p class="post-content pt-2">(Copy paste the lyrics of the Da Coconut Nut)</p>
+                        <p class="post-content pt-2">Da Coconut Nut Song...</p>
                         <div class="d-flex justify-content-between">
                             <div class="d-flex">
-                               <span class="postcom-tags post-tags-cont">#coconut</span>
-                               <span class="postcom-tags post-tags-cont">#morenuts</span>
-                                <span class="postcom-tags post-tags-cont">#deeznuts</span>
+                                <a href="view-tags.html" class="postcom-tags post-tags-cont">#coconut</a>
+                                <a href="view-tags.html" class="postcom-tags post-tags-cont">#morenuts</a>
+                                <a href="view-tags.html" class="postcom-tags post-tags-cont">#deeznuts</a>
                             </div>
                             <div class="actions-cont d-flex">
-                                <div class="share-cont">
+                                <div class="share-cont" id="share-btn" onclick="copyLink('deeznuts_post.html')">
                                     <i class="fa-regular fa-share-from-square"></i>
                                 </div>
-                                <div class="votes-cont">
-                                    <i class="fa-solid fa-circle-up"></i>
+                                <div class="votes-cont" data-bs-toggle="modal" data-bs-target="#loginModal">
+                                    <i class="fa-regular fa-circle-up"></i>
                                     <span style="font-size:smaller; margin-right: 0.5vh;"><b>3</b></span>
                                     <span style="font-size:smaller; margin-right: 0.5vh;"><b>|</b></span>
                                     <i class="fa-regular fa-circle-down"></i>
                                     <span style="font-size:smaller"><b>0</b></span>
                                 </div>
-                                <div class="comments-cont">
+                                <div class="comments-cont" onclick="redirectToPage('deeznuts_post.html')">
                                     <i class="fa-regular fa-comment-dots"></i>
-                                    <span style="font-size:smaller"><b>0</b></span>
+                                    <span style="font-size:smaller" id="comment-amnt"><b>0</b></span>
                                 </div>
                             </div>
                         </div>
                     </div>
-        
-                </div>
+                </div> <!-- End of a post -->
 
                 <!-- Post Container -->
-                <div class="post row" onclick="redirectToPage('coolbeans_post.html')">
+                <div class="post row">
 
                     <!-- Profile Picture -->
                     <div class="col-1">
@@ -382,34 +375,32 @@
                         <p class="post-content pt-2">nooo why did they have to shut down, now nobody can legally buy and play these games...</p>
                         <div class="d-flex justify-content-between">
                             <div class="d-flex">
-                               <span class="postcom-tags post-tags-cont">#mc</span>
-                               <span class="postcom-tags post-tags-cont">#minecraft</span>
-                                <span class="postcom-tags post-tags-cont">#miss</span>
-                                <span class="postcom-tags post-tags-cont">#lukas</span>
-                                <span class="postcom-tags post-tags-cont">#iloveyou</span>
+                                <a href="view-tags.html" class="postcom-tags post-tags-cont">#mc</a>
+                                <a href="view-tags.html" class="postcom-tags post-tags-cont">#minecraft</a>
+                                <a href="view-tags.html" class="postcom-tags post-tags-cont">#miss</a>
+                                <a href="view-tags.html" class="postcom-tags post-tags-cont">#lukas</a>
+                                <a href="view-tags.html" class="postcom-tags post-tags-cont">#iloveyou</a>
                             </div>
                             <div class="actions-cont d-flex">
-                                <div class="share-cont">
+                                <div class="share-cont" id="share-btn" onclick="copyLink('coolbeans_post.html')">
                                     <i class="fa-regular fa-share-from-square"></i>
                                 </div>
-                                <div class="votes-cont">
-                                    <i class="fa-solid fa-circle-up"></i>
+                                <div class="votes-cont" data-bs-toggle="modal" data-bs-target="#loginModal">
+                                    <i class="fa-regular fa-circle-up"></i>
                                     <span style="font-size:smaller; margin-right: 0.5vh;"><b>42</b></span>
                                     <span style="font-size:smaller; margin-right: 0.5vh;"><b>|</b></span>
                                     <i class="fa-regular fa-circle-down"></i>
                                     <span style="font-size:smaller"><b>4</b></span>
                                 </div>
-                                <div class="comments-cont">
+                                <div class="comments-cont" onclick="redirectToPage('coolbeans_post.html')">
                                     <i class="fa-regular fa-comment-dots"></i>
-                                    <span style="font-size:smaller"><b>1</b></span>
+                                    <span style="font-size:smaller" id="comment-amnt"><b>1</b></span>
                                 </div>
                             </div>
                         </div>
                     </div>
-        
-                </div>
-
-            </div>
+                </div> <!-- End of a post -->
+            </div> <!-- End of post container -->
             
             
             <!-- Side Container -->
@@ -515,14 +506,11 @@
                  </div>
               </div>
             </div>
-
             </div>
-        
         </div>
-
-
       </div>
 
+    
     <!-- JQuery JS -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Bootstrap JS -->
@@ -532,6 +520,6 @@
 
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript" src="js/staple.js"></script>
-
+      
 </body>
 </html>
