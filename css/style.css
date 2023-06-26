@@ -670,6 +670,36 @@ button.active div {
     margin-left:4vh;
 }
 
+.comment-options {
+    height: fit-content;
+    width: fit-content;
+    border-radius: 50px;
+    border: none;
+    background-color: #ffffff;
+}
+
+.comment-options:hover, .edited:hover {
+    background-color: #e9e9e9;
+    color: #D4A373;
+}
+
+.comment-options-menu > .dropdown-item:focus{
+    background-color: #D4A373;
+}
+
+.edited{
+    line-height: 0.3em;
+    color: #cecece;
+    font-weight: lighter;
+    
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+
+    border-radius: 20px;
+}
+
 /* Edit Profile */
 
 .edit-profile-bg {
@@ -884,7 +914,7 @@ a {
 .search-account{
     text-align: center;
     align-items: center;
-    
+
     background-color:#FFF6EB;
 
     border: solid 1px #000000;
