@@ -56,7 +56,7 @@
         </div>
       </nav>
 
-      <!-- Search Modal -->
+    <!-- Search Modal -->
     <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModal" aria-hidden="true" style="width: 100%;">
         <div class="modal-dialog">
             <div class="container">
@@ -64,8 +64,8 @@
                     <div class="modal-body search-modal-body">
                         <form>
                             <div class="d-flex justify-content-between">
-                                <input class="search-input"type="text" aria-placeholder="Search..." placeholder="Search...">
-                                <button type="submit" class="search-confirm"><i class="nav-icons fa-solid fa-magnifying-glass"></i></button>
+                                <input class="search-input" type="text" name="text" aria-placeholder="Search..." placeholder="Search...">
+                                <button type="submit" class="search-confirm" formaction="search.html"><i class="nav-icons fa-solid fa-magnifying-glass"></i></button>
                             </div>
                         </form>
                     </div>
@@ -168,7 +168,6 @@
                 <!-- Profile Proper -->
                 <div class="row">
                     <div class="col-12 d-flex justify-content-end">
-                        <i class="fa-regular fa-pen-to-square edit-profile-icon" data-bs-toggle="modal" data-bs-target="#edProfModal"></i>
                     </div>
                 </div>
                 <div class="row d-flex align-items-center">
@@ -217,16 +216,15 @@
 
                                             <div class="d-flex justify-content-between">
                                                 <h5 class="post-title"><b><a href="deeznuts_post.html">Get Coconut'd</a></b></h5>
-                                                <i class="fa-regular fa-pen-to-square"></i>
                                             </div>
                                            
                                             <span class="post-info">posted by <a href="deeznuts.html">DeezNuts</a> on May 10, 2023</span>
                                             <p class="post-content pt-2">(Copy paste the lyrics of the Da Coconut Nut)</p>
                                             <div class="d-flex justify-content-between">
                                                                                             <div class="d-flex">
-                                                <span class="postcom-tags post-tags-cont">#coconut</span>
-                                                <span class="postcom-tags post-tags-cont">#morenuts</span>
-                                                <span class="postcom-tags post-tags-cont">#deeznuts</span>
+                                                <span class="postcom-tags post-tags-cont"><a href="tag.html">#coconut</a></span>
+                                                <span class="postcom-tags post-tags-cont"><a href="tag.html">#morenuts</a></span>
+                                                <span class="postcom-tags post-tags-cont"><a href="tag.html">#deeznuts</a></span>
                                                 
                                             </div>
                                                 <div class="actions-cont d-flex">
@@ -262,14 +260,13 @@
                                     <!-- Comment Proper -->
                                         <div class="d-flex justify-content-between">
                                             <h6 class="comment-title"><b><a href="redqueen_post.html">OFF WITH THEIR HEADS!!!</a></b></h6> 
-                                            <span class="postcom-tags tags-cont">#immad #gonemad #mad #maaaaaad</span>
+                                            <span class="postcom-tags tags-cont"><a href="tag.html">#immad #gonemad #mad #maaaaaad</a></span>
                                         </div>
                                        
                                         <span class="comment-info"><a href="deeznuts.html">DeezNuts</a> commented on May 17, 2023</span>
                                         <p class="post-content pt-2">no u</p>
                                         <div class="d-flex justify-content-between">
-                                            <div class="share-cont">
-                                                <i class="fa-regular fa-pen-to-square"></i>
+                                            <div>
                                             </div>
                                             <div class="actions-cont d-flex">
                                                 <div class="share-cont">
@@ -277,10 +274,10 @@
                                                 </div>
                                                 <div class="votes-cont">
                                                     <i class="fa-solid fa-circle-up"></i>
-                                                    <span style="font-size:smaller; margin-right: 0.5vh;"><b>42</b></span>
+                                                    <span style="font-size:smaller; margin-right: 0.5vh;"><b>20</b></span>
                                                     <span style="font-size:smaller; margin-right: 0.5vh;"><b>|</b></span>
                                                     <i class="fa-regular fa-circle-down"></i>
-                                                    <span style="font-size:smaller"><b>4</b></span>
+                                                    <span style="font-size:smaller"><b>0</b></span>
                                                 </div>
                                                 <div class="comments-cont">
                                                     <i class="fa-regular fa-comment-dots"></i>
@@ -297,7 +294,7 @@
                                     <!-- Comment Proper -->
                                         <div class="d-flex justify-content-between">
                                             <h6 class="comment-title"><b><a href="view-post.html">undertale sans is so cool</a></b></h6> 
-                                            <span class="postcom-tags tags-cont">#sans #lorem #ipsum #mybrainisdying ...</span>
+                                            <span class="postcom-tags tags-cont"><a href="tag.html">#sans #lorem #ipsum #mybrainisdying ...</a></span>
                                         </div>
                                        
                                         <span class="comment-info"><a href="deeznuts.html">DeezNuts</a> commented on May 1, 2023</span>
@@ -307,8 +304,7 @@
                                                 <i class="fa-regular fa-pen-to-square"></i>
                                             </div>
                                             <div class="actions-cont d-flex">
-                                                <div class="share-cont">
-                                                    <i class="fa-regular fa-share-from-square"></i>
+                                                <div>
                                                 </div>
                                                 <div class="votes-cont">
                                                     <i class="fa-solid fa-circle-up"></i>
