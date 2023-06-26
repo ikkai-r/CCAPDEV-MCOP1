@@ -143,88 +143,51 @@
                         </div>
                         <div class="comments-cont">
                             <i class="fa-regular fa-comment-dots"></i>
-                            <span style="font-size:smaller" id="comment-amnt"><b>1</b></span>
+                            <span style="font-size:smaller"><b>1</b></span>
                         </div>
                     </div>
                 </div>
                 
                 
-                <h3>Comments (<span id="comment-bar-amnt">1</span>)</h3>
+                <h3>Comments (1)</h3>
                 <!-- Comment portion -->
-                <div class="comment-container">
-                    <div class="all-comment">
-                        <div class="row comment" id="comment">
-                            <!-- Votes. Except the icons wont appear im crying -->
-                            <div class="col-1" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
-                                <div><i class="fa-regular fa-circle-up" style="color: #292F33; font-size: x-large"></i></div>
-                                <div class="comment-vote-cont">-4</div>
-                                <div><i class="fa-regular fa-circle-down" style="color: #292F33; font-size: x-large"></i></div>
+                <div class="all-comment">
+                    <div class="row comment" id="comment">
+                        <!-- Votes. Except the icons wont appear im crying -->
+                        <div class="col-1" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                            <div><i class="fa-regular fa-circle-up" style="color: #292F33; font-size: x-large"></i></div>
+                            <div class="comment-vote-cont">-4</div>
+                            <div><i class="fa-regular fa-circle-down" style="color: #292F33; font-size: x-large"></i></div>
+                        </div>
+                        <div class="col-11">
+                            <!-- Username and Date Commented -->
+                            <div class="row">
+                                <div class="col-1">
+                                    <img src="img/profile.png" class="comment-profile-pic">
+                                </div>
+                                <div class="col-11">
+                                    <div class="comment-username"><a href="profile.html">helpvirus</a></div>
+                                    <div class="comment-username">May 25, 2023</div>
+                                </div>
                             </div>
-                            <div class="col-11">
-                                <!-- Username and Date Commented -->
-                                <div class="row">
-                                    <div class="col-1">
-                                        <img src="img/profile.png" class="comment-profile-pic">
-                                    </div>
-                                    <div class="col-11 d-flex justify-content-between">
-                                        <div>
-                                            <div class="comment-username"><a href="profile.html">helpvirus</a></div>
-                                            <div class="comment-username">May 25, 2023</div>
-                                        </div>
-                                        
-                                        <div class="comment-extras">
-                                            <!-- <span class="edited" title="This post has been edited.">edited</span> -->
-                                            <button class="comment-options dropdown" id="comment-options-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                <i class="fa-solid fa-ellipsis fa-l p-2"></i>
-                                            </button>
-                                            <div class="comment-options-menu dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-                                                <a class="dropdown-item" href="#" id="edit-comment" onclick="onClickEdit(event)">Edit comment</a>
-                                                <!-- onclick="onClickDeleteComment(event) -->
-                                                <a class="dropdown-item" href="#" id="delete-comment" data-bs-toggle="modal" data-bs-target="#comment-confirm-delete">Delete comment</a>
-                                            </div>
-
-                                            <!-- Confirm Delete Modal -->
-                                            <div class="modal fade" id="comment-confirm-delete" tabindex="-1" aria-labelledby="comment-confirm-delete" aria-hidden="true">
-                                                <div class="modal-dialog modal-dialog-centered" style="width: 40vh;">
-                                                    
-                                                    <div class="container">
-                                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="width: 75vh; font-size: 1.3rem "></button>
-                                                        <div class="modal-content confirm-delete-modal">
-                                                            <div class="modal-body" style="font-weight: bold; font-size: 1.4em;">
-                                                                Confirm deletion?
-                                                            </div>
-                                                            <div class="d-flex justify-content-between">
-                                                                <button type="button" class="btn pill" data-bs-dismiss="modal" style="background-color: #dbdbdb;">cancel</button>
-                                                                <button type="button" class="btn pill" data-bs-dismiss="modal" style="background-color: #D4A373;" onclick="onClickDeleteComment(event)">confirm</button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Comment contents -->
-                                <div class="comment-content">
-                                    <div class="comment-content-text">im sorry</div>
-                                </div>
-                                <div class="comment-reply-and-time">
-                                    <span class="comment-reply" onclick="onClickRep(event)">reply</span>
-                                    <span class="comment-time-reply">10h ago</span>
-                                </div>
-                                
-                                <!-- Write a comment -->
-                                <!-- <div class="comment-writer">
-                                    <div class="comment-textarea" contenteditable="true" placeholder="add text here" ></div>
-                                    <div class="d-flex justify-content-between">
-                                        <button class="submit comment-pill" style="background-color: #DBDBDB;">cancel</button>
-                                        <button class="submit comment-pill" style="background-color: #D4A373;">send</button>
-                                    </div>
-                                </div> -->
+                            <!-- Comment contents -->
+                            <div class="comment-content">
+                                i'm sorry :(
                             </div>
+                            <span id="comment-reply"class="comment-reply">reply</span>
+                            <span class="comment-hide-reply">hide replies</span>
+                            <!-- Write a comment -->
+                            <!-- <div class="comment-writer">
+                                <div class="comment-textarea" contenteditable="true" placeholder="add text here" ></div>
+                                <div class="d-flex justify-content-between">
+                                    <button class="submit comment-pill" style="background-color: #DBDBDB;">cancel</button>
+                                    <button class="submit comment-pill" style="background-color: #D4A373;">send</button>
+                                </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
+                
             </div>
             
             <!-- Side Container -->

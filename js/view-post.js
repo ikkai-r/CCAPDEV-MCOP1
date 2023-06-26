@@ -2,7 +2,10 @@
 
 let commentContainer = document.getElementById("comment-container");
 var isCommenting = 0;
+var isEditing = 0;
 var element;
+
+var prevCommentContent;
 
 let alreadyVoted = false;
 
@@ -67,14 +70,29 @@ function addReply(text) {
                 <div class="col-1">
                     <img src="img/profile.png" class="comment-profile-pic">
                 </div>
-                <div class="col-11">
-                    <div class="comment-username">helpvirus</div>
-                    <div class="comment-username">`+date+`</div>
+                <div class="col-11 d-flex justify-content-between">
+                    <div>
+                        <div class="comment-username"><a href="profile.html">helpvirus</a></div>
+                        <div class="comment-username">`+date+`</div>
+                    </div>
+
+
+                    <div class="comment-extras">
+                    <!-- <span class="edited" title="This post has been edited.">edited</span> -->
+                    <button class="comment-options dropdown" id="comment-options-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fa-solid fa-ellipsis fa-l p-2"></i>
+                    </button>
+                    <div class="comment-options-menu dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#" id="edit-comment" onclick="onClickEdit(event)">Edit comment</a>
+                        <a class="dropdown-item" href="#" id="delete-comment">Delete comment</a>
+                    </div>
                 </div>
+                </div>
+                
             </div>
             <!-- Comment contents -->
             <div class="comment-content">
-                ${text}
+                <div class="comment-content-text">${text}</div>
             </div>
             <span class="comment-reply" onclick="onClickRep(event)">reply</span>
             <span class="comment-time-reply">1s ago</span>
@@ -131,6 +149,21 @@ function onClickCancel(e) {
     const commentTextarea = $(".commenting");
     commentTextarea.remove();
     isCommenting = 0;
+}
+
+function copyComment(text){
+    let div = document.createElement("div");
+    div.setAttribute("class", "commenting mt-2");
+    div.setAttribute("id", "commenting");
+
+    div.innerHTML += `
+    <textarea class="comment-textarea" contenteditable="true" placeholder="add text here" >${text}</textarea>
+    <div class="d-flex justify-content-between">
+        <button class="cancel-comment pill" id="edit-cancel" style="background-color: #DBDBDB;">cancel</button>
+        <button class="submit-comment pill" id="edit-submit" style="background-color: #D4A373;">edit</button>
+    </div>`;
+
+    return div;
 }
 
 $(".comment-container").click(function (e) {
@@ -255,4 +288,101 @@ $(document).on("click", ".comment-proper-votes", function () {
 
 });
 
+function onClickEdit(e){
+    let parentComment = e.target.closest(".row.comment");
+    let commentContent = parentComment.querySelector(".comment-content");
 
+    if (isCommenting == 0 && isEditing == 0){
+        console.log("sucess");
+        
+        prevCommentContent = commentContent.innerText;
+        commentContent.querySelector(".comment-content-text").remove();
+        parentComment.querySelector(".comment-reply").remove();
+        
+        commentContent.appendChild(copyComment(prevCommentContent));
+        
+        parentComment.querySelector("#edit-cancel").addEventListener("click", onClickCancelEdit);
+        parentComment.querySelector("#edit-submit").addEventListener("click", onClickSubmitEdit);
+
+        isEditing = 1;
+    } else {
+        console.log("fail");
+    }
+}
+
+function returnCommentContentText(text){
+    let div = document.createElement("div");
+    div.setAttribute("class", "comment-content-text");
+
+    div.innerHTML += `<p>${text}</p>`;
+
+    return div;
+}
+
+function returnReply(){
+    let span = document.createElement("span");
+    span.setAttribute("class", "comment-reply");
+    span.setAttribute("onclick", "onClickRep(event)");
+
+    span.innerHTML += `reply`;
+
+    return span;
+}
+
+function insertEdited(){
+    // <span class="edited" title="This post has been edited.">edited</span>
+
+    let span = document.createElement("span");
+    span.setAttribute("class", "edited");
+    span.setAttribute("title", "This post has been edited.");
+
+    span.innerHTML += `edited`;
+
+    return span;
+}
+
+function onClickCancelEdit(e){
+    let parentComment = e.target.closest(".row.comment");
+    let commentTextarea = parentComment.querySelector(".commenting");
+    let commentContent = parentComment.querySelector(".comment-content");
+
+    commentContent.appendChild(returnCommentContentText(prevCommentContent));
+    commentTextarea.remove();
+    $(returnReply()).insertBefore(`.comment-time-reply`);
+    isEditing = 0;
+}
+    
+function onClickSubmitEdit(e){
+    let parentComment = e.target.closest(".row.comment");
+    let commenting = $(".commenting");
+    let commentContent = parentComment.querySelector(".comment-content");
+    let commentTimeReply = parentComment.querySelector(".comment-time-reply");
+    let commentOptions = parentComment.querySelector(".comment-options");
+    let commentTextarea = $(".comment-textarea");
+
+    if(commentTextarea.val() !== "") {
+        console.log("success");
+        
+        commenting.remove();
+        commentContent.appendChild(returnCommentContentText(commentTextarea.val()));
+
+        if (!parentComment.querySelector(".edited") && prevCommentContent != commentTextarea.val()){
+            $(insertEdited()).insertBefore(commentOptions);
+        } 
+        
+        $(returnReply()).insertBefore(commentTimeReply);
+        isEditing = 0;
+    } else {
+        console.log("fail");
+        console.log(commentTextarea);
+    }
+}
+
+function onClickDeleteComment(e){
+    let parentComment = e.target.closest(".row.comment");
+    let commentNumber = document.getElementById("comment-amnt").innerText;
+    document.getElementById("comment-amnt").innerHTML = parseInt(commentNumber) - 1;
+    document.getElementById("comment-bar-amnt").innerHTML = parseInt(commentNumber) - 1;
+
+    parentComment.remove();
+}
