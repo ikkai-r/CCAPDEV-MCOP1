@@ -66,7 +66,7 @@ function addReply(text) {
                     </button>
                     <div class="comment-options-menu dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
                         <a class="dropdown-item" href="#" id="edit-comment" onclick="onClickEdit(event)">Edit comment</a>
-                        <a class="dropdown-item" href="#" id="delete-comment">Delete comment</a>
+                        <a class="dropdown-item" href="#" id="delete-comment" onclick="onClickDeleteComment(event)">Delete comment</a>
                     </div>
                 </div>
                 </div>
