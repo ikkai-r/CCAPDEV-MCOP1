@@ -124,7 +124,7 @@
                     </button>
                 </div>
 
-                <!-- Confirm Delete Modal -->
+                <!-- Confirm Delete Post Modal -->
                 <div class="modal fade" id="post-creator-confirm-delete" tabindex="-1" aria-labelledby="post-creator-confirm-delete" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered" style="width: 40vh;">
                         
@@ -150,10 +150,13 @@
                     help i think i made a mistake, i downloaded this "free cool toolbar" extension and uploaded it 
                     on google drive; and now my computer does not work anymore, please help what do i do
                 </div>
-                <div class="post-creator-add-tag" contenteditable="true" placeholder="#add your tags here" oninput="if(this.innerHTML.trim()==='<br>')this.innerHTML=''">
-                    #virus #ohgosh #aaa
+                <div id="add-tag-area" class="post-creator-add-tag" contenteditable="true" placeholder="#add your tags here" oninput="if(this.innerHTML.trim()==='<br>')this.innerHTML=''"></div>
+                <div class="d-flex" id="tag-grp">
+                    <div class="post-tags-cont-r mt-2 added-tag"><i class="fa-solid fa-xmark postcom-tags" style="margin-right: 5px;"></i><span contenteditable="true">virus</span></div>
+                    <div class="post-tags-cont-r mt-2 added-tag"><i class="fa-solid fa-xmark postcom-tags" style="margin-right: 5px;"></i><span contenteditable="true">ohgosh</span></div>
+                    <div class="post-tags-cont-r mt-2 added-tag"><i class="fa-solid fa-xmark postcom-tags" style="margin-right: 5px;"></i><span contenteditable="true">aaa</span></div>
                 </div>
-                <div class="post-creator-buttons">
+                <div class="post-creator-buttons mt-3">
                     <a href="index.html">
                         <button class="pill post-creator-cancel">cancel</button>
                     </a>
@@ -264,6 +267,7 @@
                     <div class="col-10">
                         <p class="side-post-title"><b>i don't know how to use this canva</b></p>
                         <span class="side-post-info">posted by helpvirus on May 25, 2023</span>
+                        <p id="date" style="display: none;"></p>
                     </div>
                 </div>
                 </div>
@@ -280,5 +284,7 @@
     <!-- Fontawesome JS -->
     <script src="https://kit.fontawesome.com/8fc6c81a17.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="js/staple.js"></script>
+    <script type="text/javascript" src="js/post.js"></script>
+
 </body>
 
