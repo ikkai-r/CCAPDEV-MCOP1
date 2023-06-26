@@ -409,6 +409,10 @@ button.active div {
     padding-bottom: 0.3vh;
 }
 
+.comments-cont:hover {
+    cursor: pointer;
+}
+
 .votes-cont, .share-cont {
     margin-right: 1vh;
 }
