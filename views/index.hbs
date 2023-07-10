@@ -1,0 +1,115 @@
+
+<div class="container d-flex content-container mt-4">
+    <!-- All Posts Container -->
+    <div class="container flex-grow-1 posts">
+        {{#each posts}}
+        {{> post this}}
+        {{/each}}
+    </div> <!-- End of post container -->
+    
+    
+    <!-- Side Container -->
+    <div class="container-sm">
+
+        <!-- Popular Tags -->
+        <div class="container side-cont pt-4">
+            <a href="tags" class="side-text"><h5 class="side-txt">popular tags</h5></a>
+            <div class="line"></div>
+
+            <div class="container d-flex mt-2 justify-content-between">
+                <a href="tag.html" class="pop-tag" style="text-decoration: none;"><h6 class="pop-tag">#sans (2000)</h6></a>
+                <i class="fa-solid fa-circle-plus add-tag"></i>
+            </div>
+
+            <div class="container d-flex mt-2 justify-content-between">
+                <a href="tag.html" class="pop-tag" style="text-decoration: none;"><h6 class="pop-tag">#news (1042)</h6></a>
+                <i class="fa-solid fa-circle-plus add-tag"></i>
+            </div>
+
+            <div class="container d-flex mt-2 justify-content-between">
+                <a href="tag.html" class="pop-tag" style="text-decoration: none;"><h6 class="pop-tag">#gaming (510)</h6></a>
+                <i class="fa-solid fa-circle-plus add-tag"></i>
+            </div>
+
+            <div class="container d-flex mt-2 justify-content-between">
+                <a href="tag.html" class="pop-tag" style="text-decoration: none;"><h6 class="pop-tag">#hash (420)</h6></a>
+                <i class="fa-solid fa-circle-plus add-tag"></i>
+            </div>
+
+            <div class="container d-flex mt-2 justify-content-between">
+                <a href="tag.html" class="pop-tag" style="text-decoration: none;"><h6 class="pop-tag">#wow (312)</h6></a>
+                <i class="fa-solid fa-circle-plus add-tag"></i>
+            </div>
+
+            <div class="container d-flex mt-2 justify-content-between">
+                <a href="tag.html" class="pop-tag" style="text-decoration: none;"><h6 class="pop-tag">#corruption (231)</h6></a>
+                <i class="fa-solid fa-circle-plus add-tag"></i>
+            </div>
+
+        </div>
+
+        <!-- Latest Posts -->
+        <div class="container side-cont mt-4 pt-4">
+            <h5 class="side-text">latest posts</h5>
+            <div class="line"></div>
+
+            <div class="row d-flex mt-2 justify-content-between">
+                    <div class="col-2">
+                        <img src="img/profile.png" class="profile-pic">
+                    </div>
+                    <div class="col-10">
+                        <p class="side-post-title"><b><a href="profile_post.html">help my computer is dying</a></b></p>
+                        <span class="side-post-info">posted by <a href="profile.html">helpvirus</a> on May 25, 2023</span>
+                    </div>
+            </div>
+            
+            <div class="side-line mt-3"></div>
+
+            <div class="row d-flex mt-2 justify-content-between">
+                <div class="col-2">
+                    <img src="img/sherlockholmes.png" class="profile-pic">
+                </div>
+                <div class="col-10">
+                    <p class="side-post-title"><b><a href="sherlockholmes_post.html">A POST</a></b></p>
+                    <span class="side-post-info">posted by <a href="sherlockholmes.html">SherlockHolmes</a> on May 20, 2023</span>
+                </div>
+        </div>
+        
+        <div class="side-line mt-3"></div>
+
+        <div class="row d-flex mt-2 justify-content-between">
+            <div class="col-2">
+                <img src="img/redqueen.png" class="profile-pic">
+            </div>
+            <div class="col-10">
+                <p class="side-post-title"><b><a href="redqueen_post.html">OFF WITH THEIR HEADS!!!</a></b></p>
+                <span class="side-post-info">posted by <a href="redqueen.html">RedQueen</a> on May 15, 2023</span>
+            </div>
+    </div>
+    
+    <div class="side-line mt-3"></div>
+    
+    <div class="row d-flex mt-2 justify-content-between">
+        <div class="col-2">
+            <img src="img/deeznuts.jpg" class="profile-pic">
+        </div>
+        <div class="col-10">
+            <p class="side-post-title"><b><a href="deeznuts_post.html">Get Coconut'd</a></b></p>
+            <span class="side-post-info">posted by <a href ="deeznuts.html">DeezNuts</a> on May 10, 2023</span>
+        </div>
+        </div>
+
+        <div class="side-line mt-3"></div>
+    
+        <div class="row d-flex mt-2 justify-content-between">
+            <div class="col-2">
+                <img src="img/coolbeans.png" class="profile-pic">
+            </div>
+            <div class="col-10">
+                <p class="side-post-title"><b><a href="coolbeans_post.html">RIP Telltale</a></b></p>
+                <span class="side-post-info">posted by <a href="coolbeans.html">coolbeans</a> on May 5, 2023</span>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
