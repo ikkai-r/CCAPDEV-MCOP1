@@ -8,13 +8,13 @@
 
     <!-- Post Proper -->
     <div class="col-11">
-        <h5 class="post-title"><b><a href="view-post.html">{{{post_title}}}</a></b></h5>
-        <span class="post-info">posted by <a href="sansfangirlxoxo.html">{{{username}}}</a> on {{{post_date}}}</span>
+        <h5 class="post-title"><b><a href="{{post_id}}">{{{post_title}}}</a></b></h5>
+        <span class="post-info">posted by <a href="user/{{{username}}}">{{{username}}}</a> on {{{post_date}}}</span>
         <p class="post-content pt-2">{{{post_content}}}</p>
         <div class="d-flex justify-content-between">
             <div class="d-flex">
                 {{#each tags}}
-                <a href="tag.html" class="postcom-tags post-tags-cont">{{this}}</a>
+                <a href="tag/{{this}}" class="postcom-tags post-tags-cont">{{this}}</a>
                 {{/each}}
             </div>
             <div class="actions-cont d-flex">

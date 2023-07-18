@@ -103,6 +103,14 @@ app.get('/tags', (req, res) => {
     });
 });
 
+app.get('/search', (req, res) =>{
+    res.render("search");
+});
+
+const userRouter = require('./routes/user');
+app.use('/user', userRouter);
+app.use('/user', express.static(__dirname + "/public"));
+
 app.all('*', (req, res) => {
     res.status(404).send('not found.');
 });
