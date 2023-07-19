@@ -2,6 +2,8 @@ const express = require('express');
 const exphbs = require('express-handlebars');
 const app = express();
 
+const mongoose = require("mongoose");
+
 const posts = [
     {
         profile_pic: "img/sansfangirlxoxo.png",
@@ -91,18 +93,6 @@ app.get('/home', (req, res) => {
     });
 });
 
-app.get('/post', (req, res) =>{
-    res.render("create-post", {
-        header: "Create a new post"
-    });
-});
-
-app.get('/tags', (req, res) => {
-    res.render("tags", {
-        header: "View tags"
-    });
-});
-
 app.get('/search', (req, res) =>{
     res.render("search");
 });
@@ -110,6 +100,15 @@ app.get('/search', (req, res) =>{
 const userRouter = require('./routes/user');
 app.use('/user', userRouter);
 app.use('/user', express.static(__dirname + "/public"));
+
+const tagRouter = require('./routes/tag');
+app.use('/tag', tagRouter);
+app.use('/tag', express.static(__dirname + "/public"));
+
+const postRouter = require('./routes/post');
+app.use('/post', postRouter);
+app.use('/user', express.static(__dirname + "/public"));
+
 
 app.all('*', (req, res) => {
     res.status(404).send('not found.');

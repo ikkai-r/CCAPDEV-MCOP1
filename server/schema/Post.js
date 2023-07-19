@@ -1,49 +1,36 @@
 const mongoose = require("mongoose");
-const commentSchema = new mongoose.Schema({
-    _id: mongoose.Schema.Types.ObjectId,
-    username: {
-        type: Schema.Types.ObjectId, ref:'Account'
-    },
-    upvotes: [{
-        type: Schema.Types.ObjectId, ref:'Account',
-        default: 0,
-    }],
-    downvotes: [{type: Schema.Types.ObjectId, ref:'Account',
-        default: 0,
-    }],
-    date: {
-        type: Date,
-        default: () => Date.now(),
-    },
-    dateModified: Date,
-    replies: [commentSchema]
-})
 const postSchema = new mongoose.Schema({
     _id: mongoose.Schema.Types.ObjectId,
-    title: {
+    username: {
+        type:Schema.Types.ObjectId, ref:'Account'
+    },
+    post_title: {
         type: String,
         required: true,
         min: 1,
         max: 50,
     },
-    description: {
+    post_content: {
         type: String,
         required: true,
         min: 1,
     },
-    date: {
+    post_date: {
         type: Date,
         default: () => Date.now(),
     },
-    dateModified: Date,
+    post_date_modified: Date,
     upvotes: [{
         type: Schema.Types.ObjectId, ref:'Account',
-        default: 0,
     }],
     downvotes: [{type: Schema.Types.ObjectId, ref:'Account',
-        default: 0,
     }],
-    comments:[commentSchema]
+    comments: [{
+        type: Schema.Types.ObjectId, ref:'Comment',
+    }],
+    tags: [{
+        type: Schema.Types.ObjectId, ref:'Tag',
+    }]
 
 })
 

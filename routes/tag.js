@@ -8,7 +8,11 @@ router.get("/:tagname", (req, res)=>{
 
 
 router.get("/", (req, res)=>{
-    res.redirect('/');
+    res.render("tag", {
+        header: "View tags"
+    });
 });
+
+
 
 module.exports = router;
