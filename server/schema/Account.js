@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+
 const accountSchema = new mongoose.Schema({
     _id: mongoose.Schema.Types.ObjectId,
     username: {
@@ -21,14 +22,18 @@ const accountSchema = new mongoose.Schema({
         min: 1,
         max: 100
     },
+    profile_pic: {
+        type: String,
+        default: "img/de.png"
+    },
     profile_desc: {
         type: String,
         max: 50
-    }
+    },
+    subscribed_tags: [{
+        type: Schema.Types.ObjectId, ref:'Tag',
+    }]
 })
 
-var validUsername = function usernameExists(username){
-    
-}
 
 module.exports = mongoose.model('Account', accountSchema);
