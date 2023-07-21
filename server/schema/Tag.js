@@ -8,11 +8,7 @@ const tagSchema = new mongoose.Schema({
     photo:{
         type: String,
 
-    },
-    number_posts: {
-        type: Number,
-        default: 0
-    },
+    }
 
 })
 
