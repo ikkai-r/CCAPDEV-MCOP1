@@ -111,5 +111,6 @@ app.use('/user', express.static(__dirname + "/public"));
 
 
 app.all('*', (req, res) => {
-    res.status(404).send('not found.');
+    res.status(404);
+    res.render("404")
 });
