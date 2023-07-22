@@ -31,7 +31,7 @@ const accountSchema = new mongoose.Schema({
         max: 50
     },
     subscribed_tags: [{
-        type: Schema.Types.ObjectId, ref:'Tag',
+        type: mongoose.Schema.Types.ObjectId, ref:'Tag',
     }]
 })
 

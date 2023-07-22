@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const postSchema = new mongoose.Schema({
     _id: mongoose.Schema.Types.ObjectId,
     username: {
-        type:Schema.Types.ObjectId, ref:'Account'
+        type:mongoose.Schema.Types.ObjectId, ref:'Account'
     },
     post_title: {
         type: String,
@@ -21,15 +21,15 @@ const postSchema = new mongoose.Schema({
     },
     post_date_modified: Date,
     upvotes: [{
-        type: Schema.Types.ObjectId, ref:'Account',
+        type: mongoose.Schema.Types.ObjectId, ref:'Account',
     }],
-    downvotes: [{type: Schema.Types.ObjectId, ref:'Account',
+    downvotes: [{type: mongoose.Schema.Types.ObjectId, ref:'Account',
     }],
     comments: [{
-        type: Schema.Types.ObjectId, ref:'Comment',
+        type: mongoose.Schema.Types.ObjectId, ref:'Comment',
     }],
     tags: [{
-        type: Schema.Types.ObjectId, ref:'Tag',
+        type: mongoose.Schema.Types.ObjectId, ref:'Tag',
     }]
 
 })

@@ -3,7 +3,7 @@ const commentSchema = new mongoose.Schema({
     _id: mongoose.Schema.Types.ObjectId,
     // user connected to Account
     username: {
-        type: Schema.Types.ObjectId, ref:'Account'
+        type: mongoose.Schema.Types.ObjectId, ref:'Account'
     },
     comment_content: {
         type: String,
@@ -12,10 +12,10 @@ const commentSchema = new mongoose.Schema({
     },
     // upvotes and downvotes are counted by account
     upvotes: [{
-        type: Schema.Types.ObjectId, ref:'Account',
+        type: mongoose.Schema.Types.ObjectId, ref:'Account',
     }],
     downvotes: [{
-        type: Schema.Types.ObjectId, ref:'Account',
+        type: mongoose.Schema.Types.ObjectId, ref:'Account',
     }],
     comment_date: {
         type: Date,

@@ -1,9 +1,33 @@
+require('dotenv').config();
+
 const express = require('express');
 const exphbs = require('express-handlebars');
 const app = express();
 
 const mongoose = require("mongoose");
 
+const PORT = 3000 || process.env.PORT;
+const connecttoDB = require('./server/config/db');
+
+const userRouter = require('./routes/user');
+const Account = require('./server/schema/Account');
+app.use('/user', userRouter);
+app.use('/user', express.static(__dirname + "/public"));
+
+const tagRouter = require('./routes/tag');
+app.use('/tag', tagRouter);
+app.use('/tag', express.static(__dirname + "/public"));
+
+const postRouter = require('./routes/post');
+const Post = require('./server/schema/Post');
+app.use('/post', postRouter);
+app.use('/user', express.static(__dirname + "/public"));
+
+connecttoDB();
+
+// ----------------------------------------------------
+
+/*
 const posts = [
     {
         profile_pic: "img/sansfangirlxoxo.png",
@@ -71,43 +95,42 @@ const posts = [
         downvotes: 4,
         comments_cont: 1
     }
-];
+];*/
+
 
 app.use(express.static(__dirname + "/public"));
 app.engine("hbs", exphbs.engine({extname:'hbs'}));
 app.set("view engine", "hbs");
 app.set("views", "./views");
 
-app.listen(3000, () => {
-    console.log("Server listening. Port: " + 3000);
+app.listen(PORT, () => {
+    console.log("Server listening. Port: " + PORT);
 });
 
 app.get('/', (req, res) =>{
     res.redirect('/home');
 });
 
-app.get('/home', (req, res) => {
-    res.render("index", {
+app.get('/home', async (req, res) => {
+    
+    try
+    {
+        var listofposts = await Post.find();
+        res.render("index", {
         header: "Hot Posts",
-        posts: posts
-    });
+        posts: listofposts,
+        });
+        console.log(listofposts);
+    } catch(error){
+        console.log(error);
+    }
 });
 
 app.get('/search', (req, res) =>{
     res.render("search");
 });
 
-const userRouter = require('./routes/user');
-app.use('/user', userRouter);
-app.use('/user', express.static(__dirname + "/public"));
 
-const tagRouter = require('./routes/tag');
-app.use('/tag', tagRouter);
-app.use('/tag', express.static(__dirname + "/public"));
-
-const postRouter = require('./routes/post');
-app.use('/post', postRouter);
-app.use('/user', express.static(__dirname + "/public"));
 
 
 app.all('*', (req, res) => {
