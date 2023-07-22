@@ -597,6 +597,30 @@ button.active div {
     background-color: #D4A373;
 }
 
+/* Post Creator Attachments */
+.post-creator-attach{
+    float: right;
+    /* Same height as textarea even when the page is zoom-in or zoom-out */
+    height: 100%;
+    /* Same as padding-left value */
+    padding-left: 1.5vh;
+    padding-right: 1.5vh;
+    padding-top: 1.5vh;
+    padding-bottom: 1.5vh;
+    border-left: 1px solid #919191;
+    /* Same background color as the textarea */
+    background-color: #ebebeb;
+}
+
+.fa-paperclip:hover{
+    cursor: pointer;
+}
+
+.post-creator-content {
+    display: flex;
+    justify-content: space-between;
+}
+
 
 /* View Post */
 .viewed-post{
